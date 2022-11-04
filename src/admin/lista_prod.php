@@ -90,84 +90,57 @@
             }
             else
             {
-
+                $col = 0;
                 //Existe categorias cadastradas!
-                for($i = 1  ; $i <= $numero_resultado; $i++){
-                    if($i % 3 != 0){
-                        $col = 0;
-                        $col += 1;
-                    }else{
-                        $col = 0;
-                        echo '</div>
-                        </section>
-                        <section id="col">
-                        <div class="container-fluid text-center">
-                            <div class="text-success">
-                            </div>
-                            <div class="jumbotron">
-                            </div>
-                            <div class="row">';
-                    }
-                    //Gerando um vetor com as categorias
+                for($i = 1; $i <= $numero_resultado; $i++){    
                     $vetor_prod = mysqli_fetch_array($resultado_prod);
+                    if($col = 3){
+                        echo "<h1>$col</h1>";
+                        echo '
+                <section id="col" style="margin-bottom: 50px;">
+                    <div class="container-fluid text-center">
+                        <div class="text-success"></div>
+                        <div class="row">
+                        ';
+                    }
                     echo '
-                            <div class="col-'.$col.' offset-sm-1" style="margin-left: 65px;">
+                            <div class="col-1 offset-sm-1">
                                 <div class="card" style="width: 18rem;">
-                                <img src="'.$vetor_prod[4].'" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text"><b>'.$vetor_prod[1].'</b></p>
-                                    <p class="card-text">'.$vetor_prod[3].'</p>
+                                    <img src="'.$vetor_prod[4].'" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text">'.$vetor_prod[1].'</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">'.$vetor_prod[3].'</p>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-success">
+                                        <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
+                                    </button>
                                 </div>
-                                <button type="button" class="btn btn-outline-success">
-                                    <a href="edit_prod.php?id='.$vetor_prod[0].'" class="color-hover">Editar o produto</a>
-                                </button>
-                                </div>
-                            </div>';
+                            </div>
+                    ';
+                    if($col = 3){
+                        echo '
+                        </div>
+                    </div>
+                </section>
+                        ';
+                        $col = 0;
+                    }
                 }
-                echo '</div>
-            </section>';
-            }                
+            }           
         ?>     
     </div>
+    <footer>
+        <span>© 2022 By <a href="#">Trindade Fullstack</a></span>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/title.js"></script>
+    <script src="./js/scroll.js"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
 </body>
 </html>
-    <section id="col">
-        <div class="container-fluid text-center">
-            <div class="text-success">
-            </div>
-            <div class="jumbotron">
-            <h4>Colchão</h4>
-            </div>
-            <div class="row">
-            <div class="col-1 offset-sm-1" style="margin-left: 65px;">
-                <div class="card" style="width: 18rem;">
-                <img src="../assets/images/colheres novas.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">King Size</p>
-                </div>
-                <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
-                </div>
-            </div>
-            <div class="col-2 offset-md-3">
-                <div class="card" style="width: 18rem;">
-                <img src="../assets/images/panela nova.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Colchão de solteiro</p>
-                </div>
-                <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
-                </div>
-            </div>
-            <div class="col-3 offset-sm-2">
-                <div class="card" style="width: 18rem;">
-                <img src="../assets/images/cadeira nova.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Colchão de mola</p>
-                </div>
-                <button type="button" class="btn btn-outline-success">
-                    <a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a>
-                </button>
-                </div>
-            </div>
-            </div>
-            <!-- end container-fluid -->
-        </section>

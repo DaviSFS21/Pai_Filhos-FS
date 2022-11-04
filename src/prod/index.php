@@ -414,7 +414,7 @@
                     //Gerando um vetor com as categorias
                     $vetor_prod = mysqli_fetch_array($resultado_prod);
                     echo '
-                        <div class="col-1 offset-sm-1" style="margin-left: 65px;">
+                        <div class="col-'.$col.' offset-sm-1" style="margin-left: 65px;">
                         <div class="card" style="width: 18rem;">
                           <img src="'.$vetor_prod[4].'" class="card-img-top" alt="...">
                           <div class="card-body">
@@ -428,7 +428,11 @@
                         </div>
                       </div>
                         ';
-                    if ($i % 3 == 0) echo "<br><br>";
+                    if ($i % 3 == 0){
+                      echo "<br><br>";
+                      $col = 1;
+                      $col += 1;
+                    }
                 }
             }                
         ?>    
