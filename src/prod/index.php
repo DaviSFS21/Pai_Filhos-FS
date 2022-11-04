@@ -130,10 +130,12 @@
                           <div class="card-body">
                             <p class="card-text"><b>'.$vetor_prod[1].'</b></p>
                             <p class="card-text">'.$vetor_prod[3].'</p>
+                            <p class="card-text">'.$vetor_prod[6].'</p>
                           </div>
-                          <button type="button" class="btn btn-outline-success">
-                            <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover">Adicionar ao carrinho</a>
-                          </button>
+                          <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
                         </div>
                       </div>
                         ';
@@ -159,7 +161,10 @@
               <div class="card-body">
                 <p class="card-text">King Size</p>
               </div>
-              <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
+              <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
             </div>
           </div>
         </div>
@@ -180,7 +185,10 @@
               <div class="card-body">
                 <p class="card-text">Edredom algodão</p>
               </div>
-              <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
+               <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
             </div>
           </div>
         </div>
@@ -201,7 +209,10 @@
               <div class="card-body">
                 <p class="card-text">Lençol solteiro</p>
               </div>
-              <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
+               <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
             </div>
           </div>
         </div>
@@ -222,7 +233,10 @@
               <div class="card-body">
                 <p class="card-text">Cadeira sala de jantar</p>
               </div>
-              <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
+               <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
             </div>
           </div>
         </div>
@@ -243,7 +257,10 @@
               <div class="card-body">
                 <p class="card-text">Tuppuware</p>
               </div>
-              <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
+               <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
             </div>
           </div>
         </div>
@@ -264,7 +281,10 @@
               <div class="card-body">
                 <p class="card-text">Panela conjunto</p>
               </div>
-              <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
+               <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
             </div>
           </div>
         </div>
@@ -285,7 +305,10 @@
               <div class="card-body">
                 <p class="card-text">Espelhos</p>
               </div>
-              <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
+               <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
             </div>
           </div>
         </div>
@@ -306,7 +329,10 @@
               <div class="card-body">
                 <p class="card-text">Grill</p>
               </div>
-              <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
+               <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
             </div>
           </div>
         </div>
@@ -327,7 +353,10 @@
               <div class="card-body">
                 <p class="card-text">Escada de madeira</p>
               </div>
-              <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
+               <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
             </div>
           </div>
         </div>
@@ -348,7 +377,10 @@
               <div class="card-body">
                 <p class="card-text">Tapete florido</p>
               </div>
-              <button type="button" class="btn btn-outline-success"><a href="../carrinho/carrinho.php" class="color-hover">Adicionar ao carrinho</a></button>
+               <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover"><button type="button" class="btn btn-outline-success" style="display: block;
+                          width: -webkit-fill-available;">
+                            Adicionar ao carrinho
+                          </button></a>
             </div>
           </div>
         </div>
@@ -388,6 +420,7 @@
                           <div class="card-body">
                             <p class="card-text"><b>'.$vetor_prod[1].'</b></p>
                             <p class="card-text">'.$vetor_prod[3].'</p>
+                            <p class="card-text">'.$vetor_prod[6].'</p>
                           </div>
                           <button type="button" class="btn btn-outline-success">
                             <a href="teste.php?id='.$vetor_prod[0].'" class="color-hover">Adicionar ao carrinho</a>

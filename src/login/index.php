@@ -81,11 +81,6 @@ if (isset($_POST['c_email'])) {
 
   if($numero_resultado == 1){
     $vetor_user = mysqli_fetch_array($resultado_usuario);
-    ?>
-    <script>
-      alert("Aqui funciona");
-    </script>
-  <?php
 
   session_start();
 

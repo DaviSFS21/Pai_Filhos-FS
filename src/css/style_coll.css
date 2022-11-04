@@ -342,7 +342,7 @@ footer {
 
 .color-hover{
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .color-hover:hover{

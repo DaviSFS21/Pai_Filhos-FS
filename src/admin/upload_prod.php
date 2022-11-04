@@ -72,7 +72,7 @@
         ?>
             <script>
                 alert("Produto cadastrado!");
-                window.location.replace("edit_prod.php");
+                window.location.replace("lista_prod.php");
             </script>
         <?php
         }else{

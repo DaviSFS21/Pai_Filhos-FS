@@ -163,7 +163,7 @@ nav li a:hover {
 }
 
 .btn-hover:hover {
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .color-hover{

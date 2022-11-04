@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+:root{
+  --font-used:  "Quicksand", sans-serif;
+  --color-white: #fff;
+  --color-black: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-used);
+}
+
+
+li{
+  list-style-type: none;
+}
+
+.items a{
+  text-decoration: none;
+  color: var(--color-black);
+}
