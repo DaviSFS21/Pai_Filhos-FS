@@ -10,11 +10,11 @@ if(isset($_SESSION['nome'])){
         <?php
     }
 }
-if(isset($_GET['id'])){
+if(isset($_GET['id_prod'])){
     //Conexão com o banco
     require("../assets/bd/connect.php");
 
-    $id = $_GET['id'];
+    $id = $_GET['id_prod'];
 
     //Gerando a SQL de PESQUISA das categorias existentes no BD
     $pesquisar_prod = "SELECT * FROM `produto` WHERE `cod_prod` = '$id'";
@@ -57,7 +57,7 @@ if(isset($_GET['id'])){
                 Nome: <input name="c_nome_prod" type=text size=130 maxlength=120 value="'.$vetor_prod[1].'"><br>
                 Descrição: <br><textarea name="c_desc_prod" type=text size=460 maxlength=450 rows=8 cols=60>'.$vetor_prod[2].'</textarea><br>
                 Marca: <input name="c_marca" type=text size=30 maxlength=20 value="'.$vetor_prod[3].'"><br>
-                Categoria: <select name = "c_categoria" value="'.$vetor_prod[5].'">
+                Categoria: <select name = "c_categoria">
                     <option>Selecione...</option>
                     <option value = "travesseiros">Travesseiros</option>
                     <option value = "colchoes">Colchões</option>

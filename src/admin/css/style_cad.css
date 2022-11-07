@@ -37,6 +37,7 @@ span {
 }
 
 a {
+  border-radius: 2px solid #000;
 	color: #fff;
 	font-size: 14px;
 	text-decoration: none;
@@ -109,7 +110,7 @@ input {
 	width: 70rem;
 	max-width: 100%;
 	min-height: 480px;
-  height: 20rem;
+  height:100rem ;
 }
 
 .form-container {
@@ -235,16 +236,12 @@ input {
 	width: 40px;
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
+form{
+  height:600px;
+  width:20rem;
+  margin-left: 7rem;
+  margin-top: -30px;
+
 }
 
 
