@@ -34,10 +34,7 @@ if(isset($_GET['id_prod'])){
                 javascript:history.back;
             </script>
         <?php
-    }else{
-
-        //Existe categorias cadastradas!
-    }                
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -46,6 +43,7 @@ if(isset($_GET['id_prod'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_cad.css">
     <title>Editar produto(Admin)</title>
 </head>
 <body>
@@ -53,30 +51,54 @@ if(isset($_GET['id_prod'])){
         for($i = 0  ; $i < $numero_resultado; $i++){
             //Gerando um vetor com as categorias
             $vetor_prod = mysqli_fetch_array($resultado_prod);
-            echo '<form enctype="multipart/form-data" method="post" action="upload_prod.php">		
-                Nome: <input name="c_nome_prod" type=text size=130 maxlength=120 value="'.$vetor_prod[1].'"><br>
-                Descrição: <br><textarea name="c_desc_prod" type=text size=460 maxlength=450 rows=8 cols=60>'.$vetor_prod[2].'</textarea><br>
-                Marca: <input name="c_marca" type=text size=30 maxlength=20 value="'.$vetor_prod[3].'"><br>
-                Categoria: <select name = "c_categoria">
-                    <option>Selecione...</option>
-                    <option value = "travesseiros">Travesseiros</option>
-                    <option value = "colchoes">Colchões</option>
-                    <option value = "edredons">Edredons</option>
-                    <option value = "lencois">Lençois</option>
-                    <option value = "cadeiras">Cadeiras</option>
-                    <option value = "plasticos">Plásticos</option>
-                    <option value = "aluminios">Alumínios</option>
-                    <option value = "vidros">Vidros</option>
-                    <option value = "eletros">Eletrodomésticos</option>
-                    <option value = "escadas">Escadas</option>
-                    <option value = "tapetes">Tapetes</option>
-                    <option value = "panos">Panos</option>
-                </select><br>
-                Preço: <input name="c_preco" type=text size=20 maxlength=15 value="'.$vetor_prod[6].'"><br>
-                Imagem: <input type="file" name="c_img"><br>
-                <input type=submit value=Enviar>
-            </form>';
-        }
     ?>
+    <h2>Comercial Pai & Filhos - Alterar atributos</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+        </div>
+        <div class="form-container sign-in-container">
+        <form enctype="multipart/form-data" method="post" action="upload_prod.php">
+        Nome: <input name="a_marca" type=text size=30 maxlength=20  value="<?php echo $vetor_prod[1]; ?>">
+        Marca: <input name="a_nome_prod" type=text size=100 maxlength=100  value="<?php echo $vetor_prod[3] ?>">
+        Descrição: <br><textarea name="a_desc_prod" type=text size=460 maxlength=450 rows=3 cols=0  value="<?php echo $vetor_prod[2] ?>"></textarea>
+        Categoria: <select name="a_categoria">
+            <option>Selecione...</option>
+            <option value="travesseiros">Travesseiros</option>
+            <option value="colchoes">Colchões</option>
+            <option value="edredons">Edredons</option>
+            <option value="lencois">Lençois</option>
+            <option value="cadeiras">Cadeiras</option>
+            <option value="plasticos">Plásticos</option>
+            <option value="aluminios">Alumínios</option>
+            <option value="vidros">Vidros</option>
+            <option value="eletros">Eletrodomésticos</option>
+            <option value="escadas">Escadas</option>
+            <option value="tapetes">Tapetes</option>
+            <option value="panos">Panos</option>
+        </select><br>
+        Preço: <input name="a_preco" type=text size=10 maxlength=10 value="<?php echo $vetor_prod[6]; ?>">
+        Imagem: <input name="a_img" type="file">
+        <input type=submit value=Enviar>
+        </form>
+        <?php } ?>
+        </div>
+        <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+
+            </div>
+            <div class="overlay-panel overlay-right">
+            <h1>Olá, Trindade Full Stack!</h1>
+            <p>Acesso restrito</p>
+            <button><a href="index.php">Voltar</a></button>
+            </div>
+        </div>
+        </div>
+    </div>
+        <br>
+    <script src="./js/index.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
 </body>
 </html>
