@@ -48,7 +48,7 @@ if (isset($_SESSION['nome'])) {
 
         </div>
         <div class="overlay-panel overlay-right">
-          <h1>Olá, Trindade Full Stack!</h1>
+          <h1>Olá, <?php echo $_SESSION['nome']; ?>!</h1>
           <p>Acesso restrito</p>
           <button><a href="../index/index.php">Voltar</a></button>
         </div>

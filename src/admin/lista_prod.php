@@ -65,6 +65,7 @@
             </ul>
         </nav>
     </div>
+    <h1 style="margin: 40px; text-align: center;">Produtos na loja</h1>
     <?php
     //Conexão com o banco
     require("../assets/bd/connect.php");

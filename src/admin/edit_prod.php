@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+//Conexão com o banco
+require("../assets/bd/connect.php");
+
 if(isset($_SESSION['nome'])){
     if ($_SESSION['verif_admin'] == 0) {
         ?>
@@ -12,8 +16,6 @@ if(isset($_SESSION['nome'])){
 }
 if(isset($_GET['id_prod'])){
     //Conexão com o banco
-    require("../assets/bd/connect.php");
-
     $id = $_GET['id_prod'];
 
     //Gerando a SQL de PESQUISA das categorias existentes no BD
@@ -57,30 +59,31 @@ if(isset($_GET['id_prod'])){
         <div class="form-container sign-up-container">
         </div>
         <div class="form-container sign-in-container">
-        <form enctype="multipart/form-data" method="post" action="upload_prod.php">
-        Nome: <input name="a_marca" type=text size=30 maxlength=20  value="<?php echo $vetor_prod[1]; ?>">
-        Marca: <input name="a_nome_prod" type=text size=100 maxlength=100  value="<?php echo $vetor_prod[3] ?>">
-        Descrição: <br><textarea name="a_desc_prod" type=text size=460 maxlength=450 rows=3 cols=0  value="<?php echo $vetor_prod[2] ?>"></textarea>
-        Categoria: <select name="a_categoria">
-            <option>Selecione...</option>
-            <option value="travesseiros">Travesseiros</option>
-            <option value="colchoes">Colchões</option>
-            <option value="edredons">Edredons</option>
-            <option value="lencois">Lençois</option>
-            <option value="cadeiras">Cadeiras</option>
-            <option value="plasticos">Plásticos</option>
-            <option value="aluminios">Alumínios</option>
-            <option value="vidros">Vidros</option>
-            <option value="eletros">Eletrodomésticos</option>
-            <option value="escadas">Escadas</option>
-            <option value="tapetes">Tapetes</option>
-            <option value="panos">Panos</option>
-        </select><br>
-        Preço: <input name="a_preco" type=text size=10 maxlength=10 value="<?php echo $vetor_prod[6]; ?>">
-        Imagem: <input name="a_img" type="file">
-        <input type=submit value=Enviar>
-        </form>
-        <?php } ?>
+        <br>
+            <form enctype="multipart/form-data" method="POST" action="upload_alt_prod.php">
+                <input name="id_prod" type="hidden" value="<?php echo $vetor_prod[0]; ?>">
+                Nome: <input name="a_nome_prod" type=text size=140 maxlength=120 value="<?php echo $vetor_prod[1]; ?>" required>
+                Marca: <input name="a_marca" type=text size=100 maxlength=100  value="<?php echo $vetor_prod[3] ?>" required>
+                Descrição: <br><textarea name="a_desc_prod" type=text size=460 maxlength=450 rows=6 cols=40><?php echo $vetor_prod[2] ?></textarea>
+                Categoria: <select name="a_categoria">
+                    <option>Selecione...</option>
+                    <option value="travesseiros">Travesseiros</option>
+                    <option value="colchoes">Colchões</option>
+                    <option value="edredons">Edredons</option>
+                    <option value="lencois">Lençois</option>
+                    <option value="cadeiras">Cadeiras</option>
+                    <option value="plasticos">Plásticos</option>
+                    <option value="aluminios">Alumínios</option>
+                    <option value="vidros">Vidros</option>
+                    <option value="eletros">Eletrodomésticos</option>
+                    <option value="escadas">Escadas</option>
+                    <option value="tapetes">Tapetes</option>
+                    <option value="panos">Panos</option>
+                </select><br>
+                Preço: <input name="a_preco" type=text size=20 maxlength=15 value="<?php echo $vetor_prod[6]; } ?>" required>
+                Imagem: <input name="a_img" type="file">
+                <input type=submit value=Enviar>
+            </form>
         </div>
         <div class="overlay-container">
         <div class="overlay">
@@ -88,9 +91,10 @@ if(isset($_GET['id_prod'])){
 
             </div>
             <div class="overlay-panel overlay-right">
-            <h1>Olá, Trindade Full Stack!</h1>
+            <h1>Olá, <?php echo $_SESSION['nome']; ?>!</h1>
             <p>Acesso restrito</p>
             <button><a href="index.php">Voltar</a></button>
+            <a href="index.php"><button style="background-color: red; font-size: 15px;">Excluir</button></a>
             </div>
         </div>
         </div>

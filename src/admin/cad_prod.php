@@ -29,16 +29,16 @@ if (isset($_SESSION['nome'])) {
 </head>
 
 <body>
-
   <h2>Comercial Pai & Filhos - Cadastro de produtos</h2>
   <div class="container" id="container">
     <div class="form-container sign-up-container">
     </div>
     <div class="form-container sign-in-container">
+      <br>
     <form enctype="multipart/form-data" method="post" action="upload_prod.php">
-      Nome: <input name="c_nome_prod" type=text size=30 maxlength=20>
+      Nome: <input name="c_nome_prod" type=text> size=140 maxlength=120
       Marca: <input name="c_marca" type=text size=100 maxlength=100>
-      Descrição: <br><textarea name="c_desc_prod" type=text size=460 maxlength=450 rows=3 cols=0></textarea>
+      Descrição: <br><textarea name="c_desc_prod" type=text size=460 maxlength=450 rows=6 cols=40></textarea>
       Categoria: <select name="c_categoria">
         <option>Selecione...</option>
         <option value="travesseiros">Travesseiros</option>
@@ -54,7 +54,7 @@ if (isset($_SESSION['nome'])) {
         <option value="tapetes">Tapetes</option>
         <option value="panos">Panos</option>
       </select><br>
-      Preço: <input name="c_preco" type=text size=10 maxlength=10>
+      Preço: <input name="c_preco" type=text size=20 maxlength=15>
       Imagem: <input type="file" name="c_img">
       <input type=submit value=Enviar>
     </form>
@@ -65,7 +65,7 @@ if (isset($_SESSION['nome'])) {
 
         </div>
         <div class="overlay-panel overlay-right">
-          <h1>Olá, Trindade Full Stack!</h1>
+          <h1>Olá, <?php echo $_SESSION['nome']; ?>!</h1>
           <p>Acesso restrito</p>
           <button><a href="index.php">Voltar</a></button>
         </div>
