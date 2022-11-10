@@ -80,7 +80,7 @@ if(isset($_GET['id_prod'])){
                     <option value="tapetes">Tapetes</option>
                     <option value="panos">Panos</option>
                 </select><br>
-                Preço: <input name="a_preco" type=text size=20 maxlength=15 value="<?php echo $vetor_prod[6]; } ?>" required>
+                Preço: <input name="a_preco" type=text size=20 maxlength=15 value="<?php echo $vetor_prod[6]; ?>" required>
                 Imagem: <input name="a_img" type="file">
                 <input type=submit value=Enviar>
             </form>
@@ -94,7 +94,7 @@ if(isset($_GET['id_prod'])){
             <h1>Olá, <?php echo $_SESSION['nome']; ?>!</h1>
             <p>Acesso restrito</p>
             <button><a href="index.php">Voltar</a></button>
-            <a href="index.php"><button style="background-color: red; font-size: 15px;">Excluir</button></a>
+            <a href="excluir_prod.php?id_prod=<?php echo $vetor_prod[0]; } ?>"><button style="background-color: red; font-size: 15px;">Excluir</button></a>
             </div>
         </div>
         </div>

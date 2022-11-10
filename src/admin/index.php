@@ -29,7 +29,7 @@ if (isset($_SESSION['nome'])) {
 </head>
 
 <body>
-  <h2>Comercial Pai & Filhos - Pagina de administrador</h2>
+  <h2>Comercial Pai & Filhos - Página de administrador</h2>
   <div class="container" id="container">
     <div class="form-container sign-up-container">
     </div>
@@ -39,7 +39,6 @@ if (isset($_SESSION['nome'])) {
         <button><a href="./cad_prod.php">Cadastrar</a></button>
         <a href="./lista_prod.php"><button>Alterar</a></button>
         <a href="./exluir_prod.php"><button>Excluir</a></button>
-        <a href="./"><button>Consultar</a></button>
       </form>
     </div>
     <div class="overlay-container">

@@ -13,6 +13,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: -20px 0 50px;
+	overflow: hidden !important;
 }
 
 h1 {
@@ -97,7 +98,7 @@ input {
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
-	width: 150%;
+	width: 100%;
 }
 
 .container {
@@ -110,7 +111,7 @@ input {
 	width: 70rem;
 	max-width: 100%;
 	min-height: 480px;
-  	height:100rem ;
+  height:100rem ;
 }
 
 .form-container {

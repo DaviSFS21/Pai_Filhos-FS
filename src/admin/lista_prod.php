@@ -29,25 +29,25 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Alterar Produtos - Pai & Filhos</title>
 </head>
 <body>
     <div id="header_1">
         <div class="logo_1">
-        <a href="#home">Comercial Pai & Filhos</a>
+        <a href="./index.php">Comercial Pai & Filhos</a>
         </div>
         <nav style="width: 891px; padding-top: 5px;">
             <ul style="float: right; margin-right: 25px">
                 <li>
-                <a href="cad_prod.php">Cadastrar produto</a>
+                    <a href="cad_prod.php">Cadastrar produtos</a>
                 </li>
                 <li class="drop_1">
-                <a href="edit_prod.php">Ver produtos</a>
+                    <a href="../prod/index.php">Ver produtos</a>
                 </li>
                 <li class="drop_2">
-                <?php
-                if (isset($_SESSION['nome'])) {
-                    echo '<a href="../user/index.php">Olá, ' . $_SESSION['nome'] . '</a>
+                    <?php
+                    if (isset($_SESSION['nome'])) {
+                        echo '<a href="../user/index.php">Olá, ' . $_SESSION['nome'] . '</a>
                     <ul class="drop" style="width: 40%; margin-left: 430px;">
                         <li class="scroll">
                             <ul class="mega-col">
@@ -56,10 +56,10 @@
                             </ul>
                         </li>
                     </ul>';
-                } else {
-                    echo "<a href='../login/index.php'>Faça o login</a>";
-                }
-                ?>
+                    } else {
+                        echo "<a href='../login/index.php'>Faça o login</a>";
+                    }
+                    ?>
 
                 </li>
             </ul>
@@ -128,7 +128,7 @@
                         <div class="card-body">
                             <p class="card-text">'.$vetor_prod[3].'</p>
                         </div>
-                        <button type="button" class="btn btn-outline-success">
+                        <button type="button" class="btn btn-success">
                             <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>
                         </button>
                     </div>
@@ -144,9 +144,6 @@
         }
     }
     ?>     
-    <footer>
-        <span>© 2022 By <a href="#">Trindade Fullstack</a></span>
-    </footer>
     <script src="./js/main.js"></script>
     <script src="./js/title.js"></script>
     <script src="./js/scroll.js"></script>

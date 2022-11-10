@@ -36,7 +36,7 @@ if (isset($_SESSION['nome'])) {
     <div class="form-container sign-in-container">
       <br>
     <form enctype="multipart/form-data" method="post" action="upload_prod.php">
-      Nome: <input name="c_nome_prod" type=text> size=140 maxlength=120
+      Nome: <input name="c_nome_prod" type=text size=140 maxlength=120>
       Marca: <input name="c_marca" type=text size=100 maxlength=100>
       Descrição: <br><textarea name="c_desc_prod" type=text size=460 maxlength=450 rows=6 cols=40></textarea>
       Categoria: <select name="c_categoria">

@@ -202,7 +202,7 @@ session_start();
   </section>
   <br>
   <footer>
-    <span>© 2022 By <a href="#">Trindade Fullstack</a></span>
+    <span>© 2022 By <a href="../criators/criators.html">Trindade Fullstack</a></span>
   </footer>
   <script src="./js/main.js"></script>
   <script src="./js/title.js"></script>
