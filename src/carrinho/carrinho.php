@@ -5,14 +5,9 @@ session_start();
 require("../assets/bd/connect.php");
 
 if(isset($_SESSION['nome'])){
-    if ($_SESSION['verif_admin'] == 0) {
-        ?>
-        <script>
-        alert("Você não deveria estar aqui...");
-        window.location.replace("../index/index.php");
-        </script>
-        <?php
-    }
+  $carrinho = $_SESSION['carrinho'];
+}else{
+  ?><script>window.replace.location('../login/index.php')</script><?php
 }
 if(isset($_GET['id_prod'])){
     //Conexão com o banco
@@ -36,7 +31,9 @@ if(isset($_GET['id_prod'])){
                 javascript:history.back;
             </script>
         <?php
-    }
+    }else{
+      array_push($carrinho,$id);
+  }
 }
 ?>
 <!DOCTYPE html>

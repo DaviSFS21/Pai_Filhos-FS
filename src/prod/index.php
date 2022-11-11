@@ -926,7 +926,7 @@ session_start();
                                     <p class="card-text">' . $vetor_prod[3] . '</p>
                                 </div>
                                 <button type="button" class="btn btn-outline-success">
-                                    <a href="carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
+                                    <a href="../carrinho/teste.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
                                 </button>
                             </div>
                         </div>';
