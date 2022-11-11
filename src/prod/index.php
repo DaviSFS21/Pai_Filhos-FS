@@ -60,7 +60,7 @@ session_start();
                     <?php
                     if (isset($_SESSION['nome'])) {
                         echo '<a href="../user/index.php">Olá, ' . $_SESSION['nome'] . '</a>
-                    <ul class="drop" style="width: 20%; margin-left: 350px;">
+                    <ul class="drop" style="width: 20%; margin-left: 457px;">
                     <li class="scroll">
                         <ul class="mega-col">
                         <li><a href="../assets/bd/exit.php">Sair</a></li>
@@ -98,14 +98,14 @@ session_start();
     </div>
     <img src="../assets/images/produtos.PNG" style="width: 70rem; height: 30rem; margin-left: 12rem;">
     <div class="button">
-        <button type="button" class="btn btn-success" style="margin-top: -15rem; margin-left: 15rem;">
+        <button type="button" class="btn btn-success" style="margin-top: -15rem; margin-left: 17rem;">
             <a class="btn-hover" href="../prod/coll.php" style="text-decoration: none;">Aproveite a oferta!</a></button>
     </div>
     <hr>
     <?php
     if (!isset($_GET['categ'])) {
     ?>
-        <h2>Travesseiros</h2>
+        <h2 class="text-center">Travesseiros</h2>
         <?php
         $col = 0;
 
@@ -175,7 +175,7 @@ session_start();
         }
         ?>
         <hr>
-        <h2>Edredons</h2>
+        <h2 class="text-center">Edredons</h2>
         <?php
         //Conexão com o banco
         require("../assets/bd/connect.php");
@@ -243,7 +243,7 @@ session_start();
         }
         ?>
         <hr>
-        <h2>Lençóis</h2>
+        <h2 class="text-center">Lençóis</h2>
         <?php
         $col = 0;
 
@@ -313,7 +313,7 @@ session_start();
         }
         ?>
         <hr>
-        <h2>Cadeiras</h2>
+        <h2 class="text-center">Cadeiras</h2>
         <?php
         $col = 0;
 
@@ -383,7 +383,7 @@ session_start();
         }
         ?>
         <hr>
-        <h2>Plásticos</h2>
+        <h2 class="text-center">Plásticos</h2>
         <?php
         $col = 0;
 
@@ -453,7 +453,7 @@ session_start();
         }
         ?>
         <hr>
-        <h2>Alumínios</h2>
+        <h2 class="text-center">Alumínios</h2>
         <?php
         $col = 0;
 
@@ -523,7 +523,7 @@ session_start();
         }
         ?>
         <hr>
-        <h2>Vidros</h2>
+        <h2 class="text-center">Vidros</h2>
         <?php
         $col = 0;
 
@@ -593,7 +593,7 @@ session_start();
         }
         ?>
         <hr>
-        <h2>Eletrodomésticos</h2>
+        <h2 class="text-center">Eletrodomésticos</h2>
         <?php
         $col = 0;
 
@@ -663,7 +663,7 @@ session_start();
         }
         ?>
         <hr>
-        <h2>Escadas</h2>
+        <h2 class="text-center">Escadas</h2>
         <?php
         $col = 0;
 
@@ -733,7 +733,7 @@ session_start();
         }
         ?>
         <hr>
-        <h2>Tapetes</h2>
+        <h2 class="text-center">Tapetes</h2>
         <?php
         $col = 0;
 
@@ -803,7 +803,7 @@ session_start();
         }
         ?>
         <hr>
-        <h2>Panos</h2>
+        <h2 class="text-center">Panos</h2>
     <?php
         $col = 0;
 

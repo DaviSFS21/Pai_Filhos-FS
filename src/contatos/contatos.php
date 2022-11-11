@@ -60,7 +60,7 @@ session_start();
           <?php
           if (isset($_SESSION['nome'])) {
             echo '<a href="../user/index.php">Olá, ' . $_SESSION['nome'] . '</a>
-                <ul class="drop" style="width: 20%; margin-left: 350px;">
+                <ul class="drop" style="width: 20%; margin-left: 457px;">
                   <li class="scroll">
                     <ul class="mega-col">
                       <li><a href="../assets/bd/exit.php">Sair</a></li>

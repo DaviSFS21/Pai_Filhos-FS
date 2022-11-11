@@ -36,6 +36,8 @@ if(isset($_GET['id_prod'])){
                 javascript:history.back;
             </script>
         <?php
+    }else{
+        array_push($_SESSION['carrinho'],$id);
     }
 }
 ?>

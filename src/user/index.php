@@ -19,13 +19,8 @@ if (isset($_SESSION['nome'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
   <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.common.min.css" />
   <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.bootstrap.min.css" />
-
-  <script src="https://kendo.cdn.telerik.com/2018.3.1017/js/jquery.min.js"></script>
-  <script src="https://kendo.cdn.telerik.com/2018.3.1017/js/angular.min.js"></script>
-  <script src="https://kendo.cdn.telerik.com/2018.3.1017/js/kendo.all.min.js"></script>
   <title>Área do Cliente - Pai & Filhos</title>
 </head>
 
@@ -37,7 +32,7 @@ if (isset($_SESSION['nome'])) {
       <div id="tabstrip">
         <ul>
           <li class="k-state-active">
-          Usuário
+            Usuário
           </li>
         </ul>
         <div>
@@ -81,16 +76,6 @@ if (isset($_SESSION['nome'])) {
               </div>
             </div>
             <div style="clear:both;"></div>
-            <div class="row">
-              <div class="item">
-                <span>Account Begins</span>
-                <input kendo-date-time-picker style="width: 100%;" />
-              </div>
-              <div class="item">
-                <span>Account Ends</span>
-                <input kendo-date-time-picker style="width: 100%;" />
-              </div>
-            </div>
             <div style="clear:both;"></div>
             <div class="row">
               <div class="item">
@@ -103,6 +88,9 @@ if (isset($_SESSION['nome'])) {
       </div>
     </div>
   </div>
+  <script src="https://kendo.cdn.telerik.com/2018.3.1017/js/jquery.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2018.3.1017/js/angular.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2018.3.1017/js/kendo.all.min.js"></script>
   <script src="main.js"></script>
 </body>
 

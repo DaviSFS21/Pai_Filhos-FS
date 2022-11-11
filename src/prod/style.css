@@ -175,3 +175,8 @@ nav li a:hover {
   text-decoration: none;
   color: var(--color-white);
 }
+
+.text-center{
+  text-align: center;
+  justify-content: center;
+}
