@@ -81,7 +81,7 @@ if(isset($_GET['id_prod'])){
                     <option value="panos">Panos</option>
                 </select><br>
                 Preço: <input name="a_preco" type=text size=20 maxlength=15 value="<?php echo $vetor_prod[6]; ?>" required>
-                Imagem: <input name="a_img" type="file">
+                Imagem: <input type="file" name="a_img">
                 <input type=submit value=Enviar>
             </form>
         </div>
