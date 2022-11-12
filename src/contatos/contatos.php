@@ -33,22 +33,22 @@ session_start();
           <ul class="drop" style="margin-left: 40px;">
             <li class="scroll">
               <ul class="mega-col">
-                <li><a href="../prod/index.php#trav">Travesseiro</a></li>
-                <li><a href="../prod/index.php#col">Colchão</a></li>
-                <li><a href="../prod/index.php#edred">Edredom</a></li>
-                <li><a href="../prod/index.php#lenc">Lençol</a></li>
+                <li><a href="../prod/index.php?categ=travesseiros">Travesseiros</a></li>
+                <li><a href="../prod/index.php?categ=colchoes">Colchões</a></li>
+                <li><a href="../prod/index.php?categ=edredons">Edredons</a></li>
+                <li><a href="../prod/index.php?categ=lencois">Lençois</a></li>
               </ul>
-              <ul class="mega-col">
-                <li><a href="../prod/index.php#cadei">Cadeiras</a></li>
-                <li><a href="../prod/index.php#plas">Plásticos</a></li>
-                <li><a href="../prod/index.php#alum">Alumínio</a></li>
-                <li><a href="../prod/index.php#vidr">Vidros</a></li>
+                <ul class="mega-col">
+                <li><a href="../prod/index.php?categ=cadeiras">Cadeiras</a></li>
+                <li><a href="../prod/index.php?categ=plasticos">Plásticos</a></li>
+                <li><a href="../prod/index.php?categ=aluminios">Alumínios</a></li>
+                <li><a href="../prod/index.php?categ=vidros">Vidros</a></li>
               </ul>
-              <ul class="mega-col">
-                <li><a href="../prod/index.php#elet">Eletrodomésticos</a></li>
-                <li><a href="../prod/index.php#esc">Escada</a></li>
-                <li><a href="../prod/index.php#tap">Tapete</a></li>
-                <li><a href="../prod/index.php#pano">Panos</a></li>
+                <ul class="mega-col">
+                <li><a href="../prod/index.php?categ=eletros">Eletrodomésticos</a></li>
+                <li><a href="../prod/index.php?categ=escadas">Escadas</a></li>
+                <li><a href="../prod/index.php?categ=tapetes">Tapetes</a></li>
+                <li><a href="../prod/index.php?categ=panos">Panos</a></li>
               </ul>
             </li>
           </ul>

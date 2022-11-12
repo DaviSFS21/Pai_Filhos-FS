@@ -12,14 +12,3 @@ $("a.btn.continue").click(function () {
 function myFunction() {
   alert("Pedido concluído com sucesso!\nObrigado pela preferência.");
 }
-
-function removeProd() {
-  var excluir = confirm('Deseja excluir este produto?');
-
-  if(excluir == true){
-    alert('')
-  }else if(excluir == false){
-    alert('')
-  }
-}
-
