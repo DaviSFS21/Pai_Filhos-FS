@@ -134,18 +134,18 @@ session_start();
           <div class="card" style="width: 18rem;">
             <img src="../assets/images/cama nova 2.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text">Cama King size</p>
+              <p class="card-text">Camas</p>
             </div>
-            <button type="button" class="btn btn-outline-success">Saiba mais</button>
+            <button type="button" class="btn btn-outline-success"><a href="../prod/index.php">Saiba mais</a></button>
           </div>
         </div>
         <div class="col-2 offset-md-3">
           <div class="card" style="width: 18rem;">
             <img src="../assets/images/mesa nova.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text">Mesa 6 lugares</p>
+              <p class="card-text">Toalhas de mesa</p>
             </div>
-            <button type="button" class="btn btn-outline-success">Saiba mais</button>
+            <button type="button" class="btn btn-outline-success"><a href="../prod/index.php">Saiba mais</a></button>
           </div>
         </div>
         <div class="col-3 offset-sm-2">
@@ -154,7 +154,7 @@ session_start();
             <div class="card-body">
               <p class="card-text">Toalhas de banho</p>
             </div>
-            <button type="button" class="btn btn-outline-success">Saiba mais</button>
+            <button type="button" class="btn btn-outline-success"><a href="../prod/index.php">Saiba mais</a></button>
           </div>
         </div>
       </div>
@@ -174,27 +174,27 @@ session_start();
           <div class="card" style="width: 18rem;">
             <img src="../assets/images/colheres novas.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text">Kit colheres </p>
+              <p class="card-text">Kit talheres</p>
             </div>
-            <button type="button" class="btn btn-outline-success">Saiba mais</button>
+            <button type="button" class="btn btn-outline-success"><a href="../prod/index.php">Saiba mais</a></button>
           </div>
         </div>
         <div class="col-2 offset-md-3">
           <div class="card" style="width: 18rem;">
             <img src="../assets/images/panela nova.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text">Kit panela Tramontina</p>
+              <p class="card-text">Panelas</p>
             </div>
-            <button type="button" class="btn btn-outline-success">Saiba mais</button>
+            <button type="button" class="btn btn-outline-success"><a href="../prod/index.php">Saiba mais</a></button>
           </div>
         </div>
         <div class="col-3 offset-sm-2">
           <div class="card" style="width: 18rem;">
             <img src="../assets/images/cadeira nova.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text">6 Cadeiras</p>
+              <p class="card-text">Cadeiras</p>
             </div>
-            <button type="button" class="btn btn-outline-success">Saiba mais</button>
+            <button type="button" class="btn btn-outline-success"><a href="../prod/index.php">Saiba mais</a></button>
           </div>
         </div>
       </div>

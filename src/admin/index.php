@@ -37,8 +37,8 @@ if (isset($_SESSION['nome'])) {
       <form action="#">
         <h1>Gerenciamento</h1>
         <button><a href="./cad_prod.php">Cadastrar</a></button>
-        <a href="./lista_prod.php"><button>Alterar</a></button>
-        <a href="./exluir_prod.php"><button>Excluir</a></button>
+        <button><a href="./lista_prod.php">Alterar</a></button>
+        <button><a href="./exluir_prod.php">Excluir</a></button>
       </form>
     </div>
     <div class="overlay-container">

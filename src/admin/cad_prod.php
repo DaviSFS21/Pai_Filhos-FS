@@ -54,7 +54,7 @@ if (isset($_SESSION['nome'])) {
         <option value="tapetes">Tapetes</option>
         <option value="panos">Panos</option>
       </select><br>
-      Preço: <input name="c_preco" type=text size=20 maxlength=15>
+      Preço: <input name="c_preco" type=number size=20 maxlength=11>
       Imagem: <input type="file" name="c_img">
       <input type=submit value=Enviar>
     </form>
