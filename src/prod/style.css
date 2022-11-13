@@ -12,10 +12,12 @@
   --color-green: #198754;
   --color-hover: #2d72ff;
   --font-used: "Quicksand", sans-serif;
+  --bs-card-spacer-y: 0.3rem;
+  --bs-card-spacer-x: 1rem;
   --background-image: url(../assets/images/arrumando\ a\ cama.jpg);
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -166,17 +168,23 @@ nav li a:hover {
   color: var(--color-white);
 }
 
-.color-hover{
+.color-hover {
   text-decoration: none;
   color: var(--color-black);
 }
 
-.color-hover:hover{
+.color-hover:hover {
   text-decoration: none;
   color: var(--color-white);
 }
 
-.text-center{
+.text-center {
   text-align: center;
   justify-content: center;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--color-black);
 }

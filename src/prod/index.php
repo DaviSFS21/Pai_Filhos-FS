@@ -8,56 +8,71 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  Link do CSS -->
     <link rel="stylesheet" href="../prod/style.css">
-    <!-- CSS only -->
+    <!-- Frameworks/libs do CSS -->
+    <!-- Bootstrap - CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- W3.CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <!-- Cloudflare -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <title>Produtos - Pai & Filhos</title>
 </head>
 
 <body id="home">
+    <!-- DIV geral da nav -->
     <div id="header_1">
+        <!-- DIV do nome da empresa -->
         <div class="logo_1">
             <a href="../index/index.php">Comercial Pai & Filhos</a>
+            <!-- Fim - Div -->
         </div>
-        <nav style="width: 891px; padding-top: 5px; margin-right: 57px;">
+        <!-- NAV -->
+        <nav style="width: 891px; padding-top: 5px; margin-right: 113px;">
+            <!-- ul engloba e ordena todos os 'li' -->
             <ul style="padding-left: 0px;">
+                <!-- li para acesso do index -->
                 <li>
                     <a href="../index/index.php">Início</a>
                 </li>
+                <!-- li para acesso da tela produtos -->
                 <li>
                     <a href="#home">Produtos</a>
                     <ul class="drop" style="margin-left: 40px;">
+                        <!-- li do dropdown para acessar as cetegorias de produtos -->
                         <li class="scroll">
-                            <ul class="mega-col">
-                            <li><a href="../prod/index.php?categ=travesseiros">Travesseiros</a></li>
-                            <li><a href="../prod/index.php?categ=colchoes">Colchões</a></li>
-                            <li><a href="../prod/index.php?categ=edredons">Edredons</a></li>
-                            <li><a href="../prod/index.php?categ=lencois">Lençois</a></li>
+                            <ul class="mega-col" style="margin-right: 20px ;">
+                                <li><a href="#trav">Travesseiro</a></li>
+                                <li><a href="#col">Colchão</a></li>
+                                <li><a href="#edred">Edredom</a></li>
+                                <li><a href="#lenc">Lençol</a></li>
                             </ul>
                             <ul class="mega-col">
-                            <li><a href="../prod/index.php?categ=cadeiras">Cadeiras</a></li>
-                            <li><a href="../prod/index.php?categ=plasticos">Plásticos</a></li>
-                            <li><a href="../prod/index.php?categ=aluminios">Alumínios</a></li>
-                            <li><a href="../prod/index.php?categ=vidros">Vidros</a></li>
+                                <li><a href="#cadei">Cadeiras</a></li>
+                                <li><a href="#plas">Plásticos</a></li>
+                                <li><a href="#alum">Alumínio</a></li>
+                                <li><a href="#vidr">Vidros</a></li>
                             </ul>
                             <ul class="mega-col">
-                            <li><a href="../prod/index.php?categ=eletros">Eletrodomésticos</a></li>
-                            <li><a href="../prod/index.php?categ=escadas">Escadas</a></li>
-                            <li><a href="../prod/index.php?categ=tapetes">Tapetes</a></li>
-                            <li><a href="../prod/index.php?categ=panos">Panos</a></li>
+                                <li><a href="#elet">Eletrodomésticos</a></li>
+                                <li><a href="#esc">Escada</a></li>
+                                <li><a href="#tap">Tapete</a></li>
+                                <li><a href="#pano">Panos</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
+                <!-- li para acessar a página de contatos da empresa -->
                 <li class="drop_1">
                     <a href="../contatos/contatos.php">Contatos</a>
                 </li>
+                <!-- li do user/admin -->
                 <li class="drop_2">
                     <?php
+                    /* O usuário irá ver seu nome no header caso esteja logado. Senão verá uma mensagem de login. */
                     if (isset($_SESSION['nome'])) {
                         echo '<a href="../user/index.php">Olá, ' . $_SESSION['nome'] . '</a>
                     <ul class="drop" style="width: 20%; margin-left: 457px;">
@@ -71,12 +86,16 @@ session_start();
                         echo "<a href='../login/index.php'>Faça o login</a>";
                     }
                     ?>
-                </li>
+                                </li>
+                <!-- li com img para simbolizar e acessar o carrinho -->
                 <li class="icon-buy">
                     <a href="../carrinho/carrinho.php" style="height: 85px; width: 90px;"><img src="../assets/images/icon-buy.png" alt="" style="height: 50px; width: 50px; margin-top: -10px; margin-left: -10px;"></a>
                 </li>
+                <!-- form do search para conseguir pesquisar os produtos de forma automática -->
                 <form class="d-flex" role="search" style="padding-top: 27px; padding-left: 45px;">
-                    <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" list="datalistOptions" style="margin-right: 4px;">
+                    <!-- Input para fazer a pesquisa -->
+                    <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" list="datalistOptions" style="margin-right: 4px; margin-left: -10px; width: 10pc;">
+                    <!-- Datalist com os produtos disponiveis na loja -->
                     <datalist id="datalistOptions">
                         <option value="Travesseiro"></option>
                         <option value="Colchão"></option>
@@ -90,13 +109,21 @@ session_start();
                         <option value="Escada"></option>
                         <option value="Tapete"></option>
                         <option value="Panos"></option>
+                        <!-- Fim - Datalist -->
                     </datalist>
-                    <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
+                    <!-- Botão para fazer a pesquisa do produto -->
+                    <button class="btn btn-outline-success" type="submit" style="margin-right: -48px;"><i class="fa fa-search"></i></button>
+                    <!-- Fim - form -->
                 </form>
+                <!-- Fim - ul -->
             </ul>
+            <!-- Fim - Nav -->
         </nav>
+        <!-- Fim - Div -->
     </div>
+    <!-- Imagem da promoção de inverno -->
     <img src="../assets/images/produtos.PNG" style="width: 70rem; height: 30rem; margin-left: 12rem;">
+    <!-- DIV do botão para acessar a promoção -->
     <div class="button">
         <button type="button" class="btn btn-success" style="margin-top: -15rem; margin-left: 17rem;" disabled>
             <a class="btn-hover" style="text-decoration: none;" disabled>Em breve</a>
@@ -104,6 +131,9 @@ session_start();
     </div>
     <hr>
     <?php
+    /* Caso não haja uma categoria selecionada através do $_GET, o site irá pesquisar todas as categorias de produtos no banco de dados
+    de forma separada, apresentando-as atráves de uma estrutura de repetição que vai mostrar todos os produtos daquela categoria. 
+    Caso contrário, o site processará somente a pesquisa da categoria escolhida no banco de dados. */
     if (!isset($_GET['categ'])) {
     ?>
         <h2 class="text-center">Travesseiros</h2>
@@ -113,15 +143,12 @@ session_start();
         //Conexão com o banco
         require("../assets/bd/connect.php");
 
-        //Gerando a SQL de PESQUISA das categorias existentes no BD
+        /* Procurando produtos com a categoria específica. */
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'travesseiros'";
-
-        //Executando a SQL e armazenando o resultado em uma variavel
         $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
-
-        //Obtendo o numero de linhas retornadas na pesquisa
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
+        /* Caso haja resultados, o site irá usar a estrutura de repetição */
         if ($numero_resultado != 0) {
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
@@ -872,7 +899,7 @@ session_start();
                 }
             }
         }
-    } else {
+    }else{
         $col = 0;
 
         //Conexão com o banco
@@ -943,17 +970,8 @@ session_start();
         }
     }
     ?>
-    <div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <a href="#home" id="NUMBER" style="padding-left: 87rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
-            </svg></a>
-    </div>
-    <br>
-    <!-- JavaScript Bundle with Popper -->
+    <!-- Bootstrap - JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="./js/scroll.js"></script>
 </body>
-
 </html>
 <?php mysqli_close($conexao); ?>

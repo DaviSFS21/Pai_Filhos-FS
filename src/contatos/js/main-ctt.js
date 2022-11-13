@@ -1,6 +1,8 @@
-$('#header').prepend('<div id="menu-icon"><span class="first"></span><span class="second"></span><span class="third"></span></div>');
+$("#header").prepend(
+  '<div id="menu-icon"><span class="first"></span><span class="second"></span><span class="third"></span></div>'
+);
 
 $("#menu-icon").on("click", function () {
-    $("nav").slideToggle();
-    $(this).toggleClass("active");
+  $("nav").slideToggle();
+  $(this).toggleClass("active");
 });

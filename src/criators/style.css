@@ -128,23 +128,25 @@ header .menu-header ul li a:hover {
 
 .container .box:nth-child(1):before,
 .container .box:nth-child(1):after {
-  background: linear-gradient(315deg,
-      var(--color-matheus-1),
-      var(--color-matheus-2));
+  background: linear-gradient(
+    315deg,
+    var(--color-matheus-1),
+    var(--color-matheus-2)
+  );
 }
 
 .container .box:nth-child(2):before,
 .container .box:nth-child(2):after {
-  background: linear-gradient(315deg,
-      var(--color-Gustavo-1),
-      var(--color-Gustavo-2));
+  background: linear-gradient(
+    315deg,
+    var(--color-Gustavo-1),
+    var(--color-Gustavo-2)
+  );
 }
 
 .container .box:nth-child(3):before,
 .container .box:nth-child(3):after {
-  background: linear-gradient(315deg,
-      var(--color-Davi-1),
-      var(--color-Davi-2));
+  background: linear-gradient(315deg, var(--color-Davi-1), var(--color-Davi-2));
 }
 
 .container .box span {
@@ -208,7 +210,6 @@ header .menu-header ul li a:hover {
 }
 
 @keyframes animate {
-
   0%,
   100% {
     transform: translateY(10px);

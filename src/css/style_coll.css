@@ -15,7 +15,7 @@
   --background-image: url(../assets/images/arrumando\ a\ cama.jpg);
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -275,7 +275,7 @@ img {
 .add-to-cart {
   position: relative;
   display: inline-block;
-  background:  #565657;
+  background: #565657;
   color: #fff;
   border: none;
   border-radius: 0;
@@ -298,7 +298,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background:#198754;
+  background: #198754;
   transform: scaleX(0);
   transform-origin: 0 50%;
   transition: transform 0.3s ease-out;
@@ -311,19 +311,20 @@ img {
   width: 100%;
 }
 
-.grid > [class*=column-] {
+.grid > [class*="column-"] {
   padding: 1rem;
 }
-.grid.menu, .grid.product {
+.grid.menu,
+.grid.product {
   border-bottom: 0.0625rem solid #e3dddd;
 }
-.grid.menu > [class*=column-] {
+.grid.menu > [class*="column-"] {
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
 .grid.product {
   padding: 0 0 1.5rem 0;
 }
-.grid.second-nav > [class*=column-] {
+.grid.second-nav > [class*="column-"] {
   padding: 0.5rem 1rem;
 }
 
@@ -340,19 +341,19 @@ footer {
   margin: 0;
 }
 
-.color-hover{
+.color-hover {
   text-decoration: none;
   color: var(--color-white);
 }
 
-.color-hover:hover{
+.color-hover:hover {
   text-decoration: none;
   color: var(--color-white);
 }
 
 @media (min-width: 1325px) {
   .product-image img,
-.image-list img {
+  .image-list img {
     width: 100%;
   }
   .product-image {

@@ -63,7 +63,8 @@ img {
   font-size: 2em;
   float: left;
 }
-.heading a.continue:link, .heading a.continue:visited {
+.heading a.continue:link,
+.heading a.continue:visited {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   letter-spacing: -0.015em;
@@ -92,10 +93,14 @@ img {
   -o-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
-.heading a.continue:hover, .heading a.continue:focus, .heading a.continue:active {
+.heading a.continue:hover,
+.heading a.continue:focus,
+.heading a.continue:active {
   background: #198754;
 }
-.heading a.continue:hover:after, .heading a.continue:focus:after, .heading a.continue:active:after {
+.heading a.continue:hover:after,
+.heading a.continue:focus:after,
+.heading a.continue:active:after {
   right: -10px;
 }
 
@@ -169,10 +174,12 @@ img {
   width: 4em;
   float: left;
 }
-.cart .items .cartSection.qtyWrap, .cart .items .cartSection.prodTotal {
+.cart .items .cartSection.qtyWrap,
+.cart .items .cartSection.prodTotal {
   text-align: center;
 }
-.cart .items .cartSection.qtyWrap p, .cart .items .cartSection.prodTotal p {
+.cart .items .cartSection.qtyWrap p,
+.cart .items .cartSection.prodTotal p {
   font-weight: bold;
   font-size: 1.25em;
 }
@@ -249,7 +256,8 @@ a.remove:hover {
   float: left;
   border: 1px solid #dadada;
 }
-.promoCode input:active, .promoCode input:focus {
+.promoCode input:active,
+.promoCode input:focus {
   outline: 0;
 }
 .promoCode a.btn {
@@ -265,7 +273,8 @@ a.remove:hover {
   background: #198754;
 }
 
-.btn:link, .btn:visited {
+.btn:link,
+.btn:visited {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   letter-spacing: -0.015em;
@@ -294,10 +303,14 @@ a.remove:hover {
   -o-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
-.btn:hover, .btn:focus, .btn:active {
+.btn:hover,
+.btn:focus,
+.btn:active {
   background: #198754;
 }
-.btn:hover:after, .btn:focus:after, .btn:active:after {
+.btn:hover:after,
+.btn:focus:after,
+.btn:active:after {
   right: -10px;
 }
 .promoCode .btn {
@@ -365,14 +378,15 @@ a.remove:hover {
     padding: 0.25em;
     font-size: 0.75em;
   }
-  .cart .items .cartSection.prodTotal, .cart .items .cartSection.removeWrap {
+  .cart .items .cartSection.prodTotal,
+  .cart .items .cartSection.removeWrap {
     display: none;
   }
   .cart .items .cartSection .itemImg {
     width: 25%;
   }
   .promoCode,
-.subtotal {
+  .subtotal {
     width: 100%;
   }
   a.btn.continue {

@@ -1,3 +1,5 @@
+<!-- Tentativa de fazer um único arquivo para todas as <nav>'s. -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,10 +7,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS only -->
+  <!-- Frameworks/libs do CSS -->
+  <!-- Bootstrap - CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- W3.CSS -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <!-- Cloudflare -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <title>Document</title>
@@ -39,13 +44,13 @@
   }
 
   body {
-    line-height: 1.5;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    font-size: 16px;
-    color: var(--color-white);
-    text-decoration: none;
-  }
+  line-height: 1.5;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: var(--color-white);
+  text-decoration: none;
+}
 
   #header_1 a {
     text-decoration: none;
@@ -138,6 +143,11 @@
     margin-top: -5px;
   }
 
+  ol,
+  ul {
+    padding-left: 2rem;
+  }
+
   nav .drop_1 ul {
     position: absolute;
     left: 256px;
@@ -164,13 +174,12 @@
     display: block;
     padding: 8px 10px;
     border-radius: 3px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   nav li a:hover {
     background: var(--color-primary);
   }
-
   .mega-col {
     width: 25%;
     float: left;
@@ -179,20 +188,28 @@
 </style>
 
 <body>
+  <!-- DIV geral da nav -->
   <div id="header_1">
+    <!-- DIV do nome da empresa -->
     <div class="logo_1">
       <a href="../index/index.php">Comercial Pai & Filhos</a>
+      <!-- Fim - Div -->
     </div>
-    <nav style="width: 891px; padding-top: 5px; margin-right: 57px;">
+    <!-- NAV -->
+    <nav style="width: 891px; padding-top: 5px; margin-right: 113px;">
+      <!-- ul engloba e ordena todos os 'li' -->
       <ul style="padding-left: 0px;">
+        <!-- li para acesso do index -->
         <li>
           <a href="../index/index.php">Início</a>
         </li>
+        <!-- li para acesso da tela produtos -->
         <li>
           <a href="../prod/index.php">Produtos</a>
           <ul class="drop" style="margin-left: 40px;">
+            <!-- li do dropdown para acessar as cetegorias de produtos -->
             <li class="scroll">
-              <ul class="mega-col">
+              <ul class="mega-col" style="margin-right: 20px ;">
                 <li><a href="../prod/index.php#trav">Travesseiro</a></li>
                 <li><a href="../prod/index.php#col">Colchão</a></li>
                 <li><a href="../prod/index.php#edred">Edredom</a></li>
@@ -213,14 +230,16 @@
             </li>
           </ul>
         </li>
+        <!-- li para acessar a página de contatos da empresa -->
         <li class="drop_1">
           <a href="../contatos/contatos.php">Contatos</a>
         </li>
+        <!-- li do user/admin -->
         <li class="drop_2">
           <?php
           if (isset($_SESSION['nome'])) {
             echo '<a href="../user/index.php">Olá, ' . $_SESSION['nome'] . '</a>
-                <ul class="drop" style="width: 20%; margin-left: 350px;">
+                <ul class="drop" style="width: 20%; margin-left: 457px;">
                   <li class="scroll">
                     <ul class="mega-col">
                       <li><a href="../assets/bd/exit.php">Sair</a></li>
@@ -232,11 +251,16 @@
           }
           ?>
         </li>
-        <li class="icon-buy">
-          <a href="../carrinho/carrinho.php" style="height: 85px; width: 90px;"><img src="../assets/images/icon-buy.png" alt="" style="height: 50px; width: 50px; margin-top: -10px;"></a>
         </li>
-        <form class="d-flex" role="search" style="padding-top: 27px; padding-left: 25px;">
-          <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" list="datalistOptions" style="margin-right: 4px; padding-left: 12px">
+        <!-- li com img para simbolizar e acessar o carrinho -->
+        <li class="icon-buy">
+          <a href="../carrinho/carrinho.php" style="height: 84px; width: 90px;"><img src="../assets/images/icon-buy.png" alt="" style="height: 50px; width: 50px; margin-top: -10px; margin-left: -10px;"></a>
+        </li>
+        <!-- form do search para conseguir pesquisar os produtos de forma automática -->
+        <form class="d-flex" role="search" style="padding-top: 27px; padding-left: 45px;">
+          <!-- Input para fazer a pesquisa -->
+          <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" list="datalistOptions" style="margin-right: 4px; margin-left: -10px; width: 10pc;">
+          <!-- Datalist com os produtos disponiveis na loja -->
           <datalist id="datalistOptions">
             <option value="Travesseiro"></option>
             <option value="Colchão"></option>
@@ -250,16 +274,24 @@
             <option value="Escada"></option>
             <option value="Tapete"></option>
             <option value="Panos"></option>
+            <!-- Fim - Datalist -->
           </datalist>
-          <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
+          <!-- Botão para fazer a pesquisa do produto -->
+          <button class="btn btn-outline-success" type="submit" style="margin-right: -48px;"><i class="fa fa-search"></i></button>
+          <!-- Fim - form -->
         </form>
+        <!-- Fim - ul -->
       </ul>
+      <!-- Fim - Nav -->
     </nav>
+    <!-- Fim - Div -->
   </div>
-  <script src="../index/js/main.js"></script>
-  <!-- JavaScript Bundle with Popper -->
+
+  <!-- Bootstrap - JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
   </script>
+  <!-- Script do header -->
+  <script src="../index/js/main.js"></script>
 </body>
 
 </html>

@@ -4,6 +4,8 @@ session_start();
 //Conexão com o banco
 require("../assets/bd/connect.php");
 
+/* Se uma sessão estiver ativa, o programa verificará se o usuário é admin.
+Caso contrário o usuário será levado de volta à tela inicial ou levará o usuário para a tela de login caso ele não esteja logado. */
 if(isset($_SESSION['nome'])){
     if ($_SESSION['verif_admin'] == 0) {
         ?>
@@ -15,41 +17,36 @@ if(isset($_SESSION['nome'])){
         die();
     }
 }
+
+/* Caso haja uma informação de qual produto excluir, o programa executará a exclusão. */
 if(isset($_GET['id_prod'])){
-    //Conexão com o banco
+
     $id = $_GET['id_prod'];
 
-    //Gerando a SQL de PESQUISA das categorias existentes no BD
+    /* Procurando registros com o código de produto fornecido. */
     $pesquisar_prod = "SELECT * FROM `produto` WHERE `cod_prod` = '$id'";
-
-    //Executando a SQL e armazenando o resultado em uma variavel
     $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
-
-    //Obtendo o numero de linhas retornadas na pesquisa
     $numero_resultado = mysqli_num_rows($resultado_prod);
 
+    /* Se não houver produtos com o código, o programa será finalizado. Caso contrário a exclusão será continuada. */
     if($numero_resultado == 0)
     {
         ?>
-            <!-- Aqui tem Javascript!-->
-            <script>
-                alert("Este produto não foi encontrado...");
-                javascript:history.back;
-            </script>
+        <script>
+            alert("Este produto não foi encontrado...");
+            javascript:history.back;
+        </script>
         <?php
     }else{
-        //Gerando a SQL de PESQUISA das categorias existentes no BD
+        /* Criando o comando e executando-o no banco de dados. */
         $excluir_prod = "DELETE FROM `produto` WHERE `cod_prod` = '$id'";
-
-        //Executando o comando para o MySQL
         mysqli_query($conexao, $excluir_prod);
         
         ?>
-            <!-- Aqui tem Javascript!-->
-            <script>
-                alert("Produto excluído!");
-                window.location.replace("lista_prod.php");
-            </script>
+        <script>
+            alert("Produto excluído!");
+            window.location.replace("lista_prod.php");
+        </script>
         <?php
     }
     mysqli_close($conexao);

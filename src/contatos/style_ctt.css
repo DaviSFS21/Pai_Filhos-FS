@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 
-
 :root {
   --color-primary: #2c3e50;
   --color-primary-2: #34495e;
@@ -76,7 +75,7 @@ nav {
   float: right;
 }
 
-nav>ul {
+nav > ul {
   float: left;
   position: relative;
 }
@@ -123,7 +122,8 @@ nav .drop {
   margin-top: -5px;
 }
 
-ol, ul{
+ol,
+ul {
   padding-left: 2rem;
 }
 
@@ -134,7 +134,7 @@ nav .drop_1 ul {
   background: var(--color-black);
   padding: 20px 0;
   border-bottom: 3px solid var(--color-primary-2);
-  margin-top: -5px
+  margin-top: -5px;
 }
 
 nav .drop_1 li {

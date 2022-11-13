@@ -34,10 +34,9 @@ if(isset($_FILES['c_img'])){
     $categoria = $_POST['c_categoria'];
     $preco = $_POST['c_preco'];
 
+    /* Pesquisando produtos iguais com os fornecidos pelo usuário. */
     $pesquisar_prod = "SELECT * FROM `produto` WHERE nome_prod = '$nome_prod'";
-
     $resultado_prod = mysqli_query($conexao, $pesquisar_prod);
-
     $numero_retorno = mysqli_num_rows($resultado_prod);
 
     /* Se não houver nenhum produto com o mesmo nome do fornecido no formulário, a declaração das informações no SQL será feita.

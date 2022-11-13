@@ -30,7 +30,6 @@ if(isset($_GET['id_prod'])){
     if($numero_resultado == 0)
     {
         ?>
-            <!-- Aqui tem Javascript!-->
             <script>
                 alert("Este produto não foi encontrado...");
                 javascript:history.back;
@@ -45,27 +44,35 @@ if(isset($_GET['id_prod'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link do CSS-->
     <link rel="stylesheet" href="style_cad.css">
-    <title>Editar produto(Admin)</title>
+    <title>Editar produto (Admin)</title>
 </head>
 <body>
     <?php
-        for($i = 0  ; $i < $numero_resultado; $i++){
-            //Gerando um vetor com as categorias
-            $vetor_prod = mysqli_fetch_array($resultado_prod);
+    for($i = 0; $i < $numero_resultado; $i++){
+        //Gerando um vetor com as categorias
+        $vetor_prod = mysqli_fetch_array($resultado_prod);
     ?>
+    <!-- Título do container esquerdo -->
     <h2>Comercial Pai & Filhos - Alterar atributos</h2>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
         </div>
         <div class="form-container sign-in-container">
-        <br>
+            <br>
             <form enctype="multipart/form-data" method="POST" action="upload_alt_prod.php">
-                <input name="id_prod" type="hidden" value="<?php echo $vetor_prod[0]; ?>">
+                <!-- Formularios das descrições dos produtos -->
+                <input name="id_prod" type="hidden" value="<?php echo $vetor_prod[0]; ?>"> 
+                <!-- Nome do produto -->
                 Nome: <input name="a_nome_prod" type=text size=140 maxlength=120 value="<?php echo $vetor_prod[1]; ?>" required>
-                Marca: <input name="a_marca" type=text size=100 maxlength=100  value="<?php echo $vetor_prod[3] ?>" required>
+                <!-- Marca do produto -->
+                Marca: <input name="a_marca" type=text size=100 maxlength=100 value="<?php echo $vetor_prod[3] ?>" required>
+                <!-- Descrição do produto -->
                 Descrição: <br><textarea name="a_desc_prod" type=text size=460 maxlength=450 rows=6 cols=40><?php echo $vetor_prod[2] ?></textarea>
+                <!-- Categoria do produto -->
                 Categoria: <select name="a_categoria">
+                <!--Select com as categorias existentes -->
                     <option>Selecione...</option>
                     <option value="travesseiros">Travesseiros</option>
                     <option value="colchoes">Colchões</option>
@@ -80,29 +87,31 @@ if(isset($_GET['id_prod'])){
                     <option value="tapetes">Tapetes</option>
                     <option value="panos">Panos</option>
                 </select><br>
+                <!-- Preço do produto -->
                 Preço: <input name="a_preco" type=number size=20 maxlength=11 value="<?php echo $vetor_prod[6]; ?>" required>
-                Imagem: <input type="file" name="a_img" required>
+                <!--Imagem do produto -->
+                Imagem: <input type="file" name="a_img">
                 <input type=submit value=Enviar>
             </form>
         </div>
         <div class="overlay-container">
-        <div class="overlay">
-            <div class="overlay-panel overlay-left">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
 
+                </div>
+                <!-- Class do container direito -->
+                <div class="overlay-panel overlay-right">
+                    <h1>Olá, <?php echo $_SESSION['nome']; ?>!</h1>
+                    <p>Acesso restrito</p>
+                    <button><a href="index.php">Voltar</a></button>
+                    <a href="excluir_prod.php?id_prod=<?php echo $vetor_prod[0];} ?>">
+                    <button style="background-color: red; font-size: 15px;">Excluir</button></a>
+                </div>
             </div>
-            <div class="overlay-panel overlay-right">
-            <h1>Olá, <?php echo $_SESSION['nome']; ?>!</h1>
-            <p>Acesso restrito</p>
-            <button><a href="index.php">Voltar</a></button>
-            <a href="excluir_prod.php?id_prod=<?php echo $vetor_prod[0]; } ?>"><button style="background-color: red; font-size: 15px;">Excluir</button></a>
-            </div>
-        </div>
         </div>
     </div>
-        <br>
+    <br>
+    <!-- JS Link -->
     <script src="./js/index.js"></script>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
-    </script>
 </body>
 </html>
