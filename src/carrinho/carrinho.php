@@ -9,21 +9,16 @@ require("../assets/bd/connect.php");
 if(!isset($_SESSION['nome'])){
     ?><script>window.location.replace('../login/index.php')</script><?php
 }
+
+if(isset($_GET['action'])){
+  if($_GET['action'] = "limp"){
+    unset($_SESSION['carrinho']);
+  }
+}
+
 if(isset($_GET['id_prod'])){
 
   $id = intval($_GET['id_prod']);
-
-  if(isset($_GET['action'])){
-    if($_GET['action'] = "del"){
-      $_SESSION['carrinho'][$id] -= 1;
-    }
-    if($_GET['action'] = "add"){
-      $_SESSION['carrinho'][$id] += 1;
-    }
-    if($_GET['action'] = "limp"){
-      unset($_SESSION['carrinho']);
-    }
-  }
   
   if(!isset($_SESSION['carrinho'])){
     $_SESSION['carrinho'] = [];
@@ -101,8 +96,8 @@ if(isset($_GET['id_prod'])){
               <div class="cartSection">
                 <img src="<?php echo $vetor_prod[4]; ?>" alt="" class="itemImg" />
                 <p class="itemNumber">ID do produto: <?php echo $vetor_prod[0]; ?></p>
-                <h3><?php echo $vetor_prod[1]; ?></h3>
-                <h4><?php echo $vetor_prod[3]; ?></h4>
+                <h3><?php echo $vetor_prod[1]; ?> - <?php echo $vetor_prod[3]; ?></h3>
+                
                 <p><?php echo $qtd . " x " . $vetor_prod[6]; ?></p>
               </div>
               <div class="prodTotal cartSection">

@@ -98,8 +98,8 @@ session_start();
     </div>
     <img src="../assets/images/produtos.PNG" style="width: 70rem; height: 30rem; margin-left: 12rem;">
     <div class="button">
-        <button type="button" class="btn btn-success" style="margin-top: -15rem; margin-left: 17rem;">
-            <a class="btn-hover" href="../prod/coll.php" style="text-decoration: none;">Aproveite a oferta!</a>
+        <button type="button" class="btn btn-success" style="margin-top: -15rem; margin-left: 17rem;" disabled>
+            <a class="btn-hover" style="text-decoration: none;" disabled>Em breve</a>
         </button>
     </div>
     <hr>

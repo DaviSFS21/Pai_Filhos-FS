@@ -60,7 +60,7 @@ session_start();
         <li class="drop_2">
           <?php
           if (isset($_SESSION['nome'])) {
-            echo '<a href="../user/index.php">Olá, ' . $_SESSION['nome'] . '</a>
+            echo '<a href="../carrinho/carrinho.php">Olá, ' . $_SESSION['nome'] . '</a>
                 <ul class="drop" style="width: 20%; margin-left: 457px;">
                   <li class="scroll">
                     <ul class="mega-col">

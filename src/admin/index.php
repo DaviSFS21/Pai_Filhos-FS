@@ -1,15 +1,18 @@
 <?php
 session_start();
-if (isset($_SESSION['nome'])) {
-  if ($_SESSION['verif_admin'] == 0) {
-?>
+
+/* A sequência irá verificar se há uma sessão ativa no dispositivo, caso contrário levará o usuário para a página de login. 
+Logo após o código irá verificar se a conta da sessão possui privilégios de administrador, caso contrário irá levar para a página inicial. */
+if(isset($_SESSION['nome'])){
+  if($_SESSION['verif_admin'] == 0){
+  ?>
     <script>
       alert("Você não deveria estar aqui...");
       window.location.replace("../index/index.php");
     </script>
   <?php
   }
-} else {
+}else{
   ?>
   <script>
     window.location.replace("../login/index.php");
