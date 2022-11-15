@@ -40,32 +40,32 @@ session_start();
         </li>
           <!-- li para acesso da tela produtos -->
         <li>
-          <a href="../prod/index.php">Produtos</a>
-          <ul class="drop" style="margin-left: 40px;">
-          <!-- li do dropdown para acessar as cetegorias de produtos -->
+        <a href="../prod/index.php">Produtos</a>
+        <ul class="drop" style="margin-left: 40px;">
+            <!-- li do dropdown para acessar as cetegorias de produtos -->
             <li class="scroll">
-              <ul class="mega-col" style="margin-right: 20px ;">
-                <li><a href="../prod/index.php#trav">Travesseiro</a></li>
-                <li><a href="../prod/index.php#col">Colchão</a></li>
-                <li><a href="../prod/index.php#edred">Edredom</a></li>
-                <li><a href="../prod/index.php#lenc">Lençol</a></li>
-              </ul>
-              <ul class="mega-col">
-                <li><a href="../prod/index.php#cadei">Cadeiras</a></li>
-                <li><a href="../prod/index.php#plas">Plásticos</a></li>
-                <li><a href="../prod/index.php#alum">Alumínio</a></li>
-                <li><a href="../prod/index.php#vidr">Vidros</a></li>
-              </ul>
-              <ul class="mega-col">
-                <li><a href="../prod/index.php#elet">Eletrodomésticos</a></li>
-                <li><a href="../prod/index.php#esc">Escada</a></li>
-                <li><a href="../prod/index.php#tap">Tapete</a></li>
-                <li><a href="../prod/index.php#pano">Panos</a></li>
-              </ul>
+            <ul class="mega-col" style="margin-right: 20px ;">
+                <li><a href="../prod/index.php?categ=travesseiros">Travesseiros</a></li>
+                <li><a href="../prod/index.php?categ=colchoes">Colchões</a></li>
+                <li><a href="../prod/index.php?categ=edredons">Edredons</a></li>
+                <li><a href="../prod/index.php?categ=lencois">Lençois</a></li>
+            </ul>
+            <ul class="mega-col">
+                <li><a href="../prod/index.php?categ=cadeiras">Cadeiras</a></li>
+                <li><a href="../prod/index.php?categ=plasticos">Plásticos</a></li>
+                <li><a href="../prod/index.php?categ=aluminios">Alumínios</a></li>
+                <li><a href="../prod/index.php?categ=vidros">Vidros</a></li>
+            </ul>
+            <ul class="mega-col">
+                <li><a href="../prod/index.php?categ=eletros">Eletrodomésticos</a></li>
+                <li><a href="../prod/index.php?categ=escadas">Escadas</a></li>
+                <li><a href="../prod/index.php?categ=tapetes">Tapetes</a></li>
+                <li><a href="../prod/index.php?categ=panos">Panos</a></li>
+            </ul>
             </li>
-          </ul>
+        </ul>
         </li>
-        <!-- li para acessar a página de contatos da empresa -->
+      <!-- li para acessar a página de contatos da empresa -->
         <li class="drop_1">
           <a href="#home">Contatos</a>
         </li>
@@ -74,7 +74,7 @@ session_start();
           <?php
           /* O usuário irá ver seu nome no header caso esteja logado. Senão verá uma mensagem de login. */
           if (isset($_SESSION['nome'])) {
-            echo '<a href="../carrinho/carrinho.php">Olá, ' . $_SESSION['nome'] . '</a>
+            echo '<a href="../user/index.php">Olá, ' . $_SESSION['nome'] . '</a>
                 <ul class="drop" style="width: 20%; margin-left: 457px;">
                   <li class="scroll">
                     <ul class="mega-col">

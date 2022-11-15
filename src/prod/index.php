@@ -40,30 +40,30 @@ session_start();
                 </li>
                 <!-- li para acesso da tela produtos -->
                 <li>
-                    <a href="#home">Produtos</a>
-                    <ul class="drop" style="margin-left: 40px;">
-                        <!-- li do dropdown para acessar as cetegorias de produtos -->
-                        <li class="scroll">
-                            <ul class="mega-col" style="margin-right: 20px ;">
-                                <li><a href="#trav">Travesseiro</a></li>
-                                <li><a href="#col">Colchão</a></li>
-                                <li><a href="#edred">Edredom</a></li>
-                                <li><a href="#lenc">Lençol</a></li>
-                            </ul>
-                            <ul class="mega-col">
-                                <li><a href="#cadei">Cadeiras</a></li>
-                                <li><a href="#plas">Plásticos</a></li>
-                                <li><a href="#alum">Alumínio</a></li>
-                                <li><a href="#vidr">Vidros</a></li>
-                            </ul>
-                            <ul class="mega-col">
-                                <li><a href="#elet">Eletrodomésticos</a></li>
-                                <li><a href="#esc">Escada</a></li>
-                                <li><a href="#tap">Tapete</a></li>
-                                <li><a href="#pano">Panos</a></li>
-                            </ul>
-                        </li>
+                <a href="../prod/index.php">Produtos</a>
+                <ul class="drop" style="margin-left: 40px;">
+                    <!-- li do dropdown para acessar as cetegorias de produtos -->
+                    <li class="scroll">
+                    <ul class="mega-col" style="margin-right: 20px ;">
+                        <li><a href="../prod/index.php?categ=travesseiros">Travesseiros</a></li>
+                        <li><a href="../prod/index.php?categ=colchoes">Colchões</a></li>
+                        <li><a href="../prod/index.php?categ=edredons">Edredons</a></li>
+                        <li><a href="../prod/index.php?categ=lencois">Lençois</a></li>
                     </ul>
+                    <ul class="mega-col">
+                        <li><a href="../prod/index.php?categ=cadeiras">Cadeiras</a></li>
+                        <li><a href="../prod/index.php?categ=plasticos">Plásticos</a></li>
+                        <li><a href="../prod/index.php?categ=aluminios">Alumínios</a></li>
+                        <li><a href="../prod/index.php?categ=vidros">Vidros</a></li>
+                    </ul>
+                    <ul class="mega-col">
+                        <li><a href="../prod/index.php?categ=eletros">Eletrodomésticos</a></li>
+                        <li><a href="../prod/index.php?categ=escadas">Escadas</a></li>
+                        <li><a href="../prod/index.php?categ=tapetes">Tapetes</a></li>
+                        <li><a href="../prod/index.php?categ=panos">Panos</a></li>
+                    </ul>
+                    </li>
+                </ul>
                 </li>
                 <!-- li para acessar a página de contatos da empresa -->
                 <li class="drop_1">
@@ -172,6 +172,9 @@ session_start();
                               <div class="card-body">
                                   <p class="card-text">' . $vetor_prod[3] . '</p>
                               </div>
+                              <div class="card-body">
+                                  <p class="card-text">' . $vetor_prod[6] . '</p>
+                              </div>
                               <button type="button" class="btn btn-outline-success">
                                   <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
                               </button>
@@ -237,6 +240,9 @@ session_start();
                               </div>
                               <div class="card-body">
                                   <p class="card-text">' . $vetor_prod[3] . '</p>
+                              </div>
+                              <div class="card-body">
+                                  <p class="card-text">' . $vetor_prod[6] . '</p>
                               </div>
                               <button type="button" class="btn btn-outline-success">
                                   <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
@@ -306,6 +312,9 @@ session_start();
                               <div class="card-body">
                                   <p class="card-text">' . $vetor_prod[3] . '</p>
                               </div>
+                              <div class="card-body">
+                                  <p class="card-text">' . $vetor_prod[6] . '</p>
+                              </div>
                               <button type="button" class="btn btn-outline-success">
                                   <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
                               </button>
@@ -373,6 +382,9 @@ session_start();
                               </div>
                               <div class="card-body">
                                   <p class="card-text">' . $vetor_prod[3] . '</p>
+                              </div>
+                              <div class="card-body">
+                                  <p class="card-text">' . $vetor_prod[6] . '</p>
                               </div>
                               <button type="button" class="btn btn-outline-success">
                                   <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
@@ -442,6 +454,9 @@ session_start();
                               <div class="card-body">
                                   <p class="card-text">' . $vetor_prod[3] . '</p>
                               </div>
+                              <div class="card-body">
+                                  <p class="card-text">' . $vetor_prod[6] . '</p>
+                              </div>
                               <button type="button" class="btn btn-outline-success">
                                   <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
                               </button>
@@ -509,6 +524,9 @@ session_start();
                               </div>
                               <div class="card-body">
                                   <p class="card-text">' . $vetor_prod[3] . '</p>
+                              </div>
+                              <div class="card-body">
+                                  <p class="card-text">' . $vetor_prod[6] . '</p>
                               </div>
                               <button type="button" class="btn btn-outline-success">
                                   <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
@@ -578,6 +596,9 @@ session_start();
                               <div class="card-body">
                                   <p class="card-text">' . $vetor_prod[3] . '</p>
                               </div>
+                              <div class="card-body">
+                                  <p class="card-text">' . $vetor_prod[6] . '</p>
+                              </div>
                               <button type="button" class="btn btn-outline-success">
                                   <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
                               </button>
@@ -645,6 +666,9 @@ session_start();
                               </div>
                               <div class="card-body">
                                   <p class="card-text">' . $vetor_prod[3] . '</p>
+                              </div>
+                              <div class="card-body">
+                                  <p class="card-text">' . $vetor_prod[6] . '</p>
                               </div>
                               <button type="button" class="btn btn-outline-success">
                                   <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
@@ -714,6 +738,9 @@ session_start();
                               <div class="card-body">
                                   <p class="card-text">' . $vetor_prod[3] . '</p>
                               </div>
+                              <div class="card-body">
+                                  <p class="card-text">' . $vetor_prod[6] . '</p>
+                              </div>
                               <button type="button" class="btn btn-outline-success">
                                   <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
                               </button>
@@ -781,6 +808,9 @@ session_start();
                               </div>
                               <div class="card-body">
                                   <p class="card-text">' . $vetor_prod[3] . '</p>
+                              </div>
+                              <div class="card-body">
+                                  <p class="card-text">' . $vetor_prod[6] . '</p>
                               </div>
                               <button type="button" class="btn btn-outline-success">
                                   <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
@@ -850,6 +880,9 @@ session_start();
                                 <div class="card-body">
                                     <p class="card-text">' . $vetor_prod[3] . '</p>
                                 </div>
+                                <div class="card-body">
+                                    <p class="card-text">' . $vetor_prod[6] . '</p>
+                                </div>
                                 <button type="button" class="btn btn-outline-success">
                                     <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>
                                 </button>
@@ -866,6 +899,9 @@ session_start();
             }
         }
     }else{
+        //Conexão com o banco
+        require("../assets/bd/connect.php");
+
         $col = 0;
 
         $categoria = $_GET['categ'];
@@ -915,6 +951,9 @@ session_start();
                                 </div>
                                 <div class="card-body">
                                     <p class="card-text">' . $vetor_prod[3] . '</p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">' . $vetor_prod[6] . '</p>
                                 </div>
                                 <button type="button" class="btn btn-outline-success">
                                     <a href="../carrinho/carrinho.php?id_prod=' . $vetor_prod[0] . '" class="color-hover">Adicionar ao carrinho</a>

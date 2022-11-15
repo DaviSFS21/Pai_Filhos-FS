@@ -75,7 +75,7 @@ session_start();
           <?php
           /* O usuário irá ver seu nome no header caso esteja logado. Senão verá uma mensagem de login. */
           if(isset($_SESSION['nome'])){
-            echo '<a href="../carrinho/carrinho.php">Olá, ' . $_SESSION['nome'] . '</a>
+            echo '<a href="../user/index.php">Olá, ' . $_SESSION['nome'] . '</a>
                 <ul class="drop" style="width: 20%; margin-left: 457px;">
                   <li class="scroll">
                     <ul class="mega-col">

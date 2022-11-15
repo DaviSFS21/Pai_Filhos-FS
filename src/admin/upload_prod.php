@@ -85,7 +85,7 @@ if(isset($_FILES['c_img'])){
 
         /* Concatenando o novo caminho da imagem. */
         $path_img = $pasta . $novoNomeImg . "." . $extensaoImg;    
-        move_uploaded_file($img_prod['tmp_name'], $novoPath);
+        move_uploaded_file($img_prod['tmp_name'], $path_img);
 
         /* Criando o comando para SQL e executando-o no banco de dados com as informações processadas. */
         $sql_cadastrar = "INSERT INTO `produto`(`nome_prod`,`desc_prod`,`marca`,`path_img`,`categoria`,`preco`) 
