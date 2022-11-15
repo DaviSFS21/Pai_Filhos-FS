@@ -39,13 +39,20 @@ if(isset($_GET['id_prod'])){
   if($numero_resultado == 0)
   {
       ?>
-          <!-- Aqui tem Javascript!-->
           <script>
               alert("Este produto não foi encontrado...");
               javascript:history.back;
               die();
           </script>
       <?php
+  }else{
+    if(!isset($_GET['action'])){
+      if(isset($_SESSION['carrinho'][$id])){
+          $_SESSION['carrinho'][$id] += 1;
+      }else{
+          $_SESSION['carrinho'][$id] = 1;
+      }
+    }
   }
 }
 ?>

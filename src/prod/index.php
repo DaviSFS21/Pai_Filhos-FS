@@ -92,25 +92,9 @@ session_start();
                     <a href="../carrinho/carrinho.php" style="height: 85px; width: 90px;"><img src="../assets/images/icon-buy.png" alt="" style="height: 50px; width: 50px; margin-top: -10px; margin-left: -10px;"></a>
                 </li>
                 <!-- form do search para conseguir pesquisar os produtos de forma automática -->
-                <form class="d-flex" role="search" style="padding-top: 27px; padding-left: 45px;">
+                <form action="../prod/search.php" method="GET" class="d-flex" role="search" style="padding-top: 27px; padding-left: 45px;">
                     <!-- Input para fazer a pesquisa -->
-                    <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" list="datalistOptions" style="margin-right: 4px; margin-left: -10px; width: 10pc;">
-                    <!-- Datalist com os produtos disponiveis na loja -->
-                    <datalist id="datalistOptions">
-                        <option value="Travesseiro"></option>
-                        <option value="Colchão"></option>
-                        <option value="Edredom"></option>
-                        <option value="Lençol"></option>
-                        <option value="Cadeiras"></option>
-                        <option value="Plásticos"></option>
-                        <option value="Alumínio"></option>
-                        <option value="Vidros"></option>
-                        <option value="Eletrodomésticos"></option>
-                        <option value="Escada"></option>
-                        <option value="Tapete"></option>
-                        <option value="Panos"></option>
-                        <!-- Fim - Datalist -->
-                    </datalist>
+                    <input class="form-control" type="search" placeholder="Pesquisar" name="search" aria-label="Pesquisar" list="datalistOptions" style="margin-right: 4px; margin-left: -10px; width: 10pc;">
                     <!-- Botão para fazer a pesquisa do produto -->
                     <button class="btn btn-outline-success" type="submit" style="margin-right: -48px;"><i class="fa fa-search"></i></button>
                     <!-- Fim - form -->
@@ -135,9 +119,7 @@ session_start();
     de forma separada, apresentando-as atráves de uma estrutura de repetição que vai mostrar todos os produtos daquela categoria. 
     Caso contrário, o site processará somente a pesquisa da categoria escolhida no banco de dados. */
     if (!isset($_GET['categ'])) {
-    ?>
-        <h2 class="text-center">Travesseiros</h2>
-        <?php
+
         $col = 0;
 
         //Conexão com o banco
@@ -150,6 +132,10 @@ session_start();
 
         /* Caso haja resultados, o site irá usar a estrutura de repetição */
         if ($numero_resultado != 0) {
+            echo '
+        <hr>
+        <h2 class="text-center">Travesseiros</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -201,12 +187,6 @@ session_start();
                 }
             }
         }
-        ?>
-        <hr>
-        <h2 class="text-center">Edredons</h2>
-        <?php
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'edredons'";
@@ -217,7 +197,11 @@ session_start();
         //Obtendo o numero de linhas retornadas na pesquisa
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
-        if ($numero_resultado != 0) {
+        if($numero_resultado != 0){
+            echo '
+        <hr>
+        <h2 class="text-center">Edredons</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -269,14 +253,8 @@ session_start();
                 }
             }
         }
-        ?>
-        <hr>
-        <h2 class="text-center">Lençóis</h2>
-        <?php
-        $col = 0;
 
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
+        $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'lencois'";
@@ -287,7 +265,11 @@ session_start();
         //Obtendo o numero de linhas retornadas na pesquisa
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
-        if ($numero_resultado != 0) {
+        if($numero_resultado != 0){
+            echo '
+        <hr>
+        <h2 class="text-center">Lençóis</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -339,14 +321,8 @@ session_start();
                 }
             }
         }
-        ?>
-        <hr>
-        <h2 class="text-center">Cadeiras</h2>
-        <?php
-        $col = 0;
 
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
+        $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'cadeiras'";
@@ -357,7 +333,11 @@ session_start();
         //Obtendo o numero de linhas retornadas na pesquisa
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
-        if ($numero_resultado != 0) {
+        if($numero_resultado != 0){
+            echo '
+        <hr>
+        <h2 class="text-center">Cadeiras</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -409,14 +389,8 @@ session_start();
                 }
             }
         }
-        ?>
-        <hr>
-        <h2 class="text-center">Plásticos</h2>
-        <?php
-        $col = 0;
 
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
+        $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'plasticos'";
@@ -428,6 +402,10 @@ session_start();
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
         if ($numero_resultado != 0) {
+            echo '
+        <hr>
+        <h2 class="text-center">Plásticos</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -479,14 +457,8 @@ session_start();
                 }
             }
         }
-        ?>
-        <hr>
-        <h2 class="text-center">Alumínios</h2>
-        <?php
-        $col = 0;
 
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
+        $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'aluminios'";
@@ -498,6 +470,10 @@ session_start();
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
         if ($numero_resultado != 0) {
+            echo '
+        <hr>
+        <h2 class="text-center">Alumínios</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -549,14 +525,8 @@ session_start();
                 }
             }
         }
-        ?>
-        <hr>
-        <h2 class="text-center">Vidros</h2>
-        <?php
-        $col = 0;
 
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
+        $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'vidros'";
@@ -568,6 +538,10 @@ session_start();
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
         if ($numero_resultado != 0) {
+            echo '
+        <hr>
+        <h2 class="text-center">Vidros</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -619,14 +593,8 @@ session_start();
                 }
             }
         }
-        ?>
-        <hr>
-        <h2 class="text-center">Eletrodomésticos</h2>
-        <?php
-        $col = 0;
 
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
+        $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'eletros'";
@@ -638,6 +606,10 @@ session_start();
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
         if ($numero_resultado != 0) {
+            echo '
+        <hr>
+        <h2 class="text-center">Eletrodomésticos</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -689,14 +661,8 @@ session_start();
                 }
             }
         }
-        ?>
-        <hr>
-        <h2 class="text-center">Escadas</h2>
-        <?php
-        $col = 0;
 
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
+        $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'escadas'";
@@ -708,6 +674,10 @@ session_start();
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
         if ($numero_resultado != 0) {
+            echo '
+        <hr>
+        <h2 class="text-center">Escadas</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -759,14 +729,8 @@ session_start();
                 }
             }
         }
-        ?>
-        <hr>
-        <h2 class="text-center">Tapetes</h2>
-        <?php
-        $col = 0;
 
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
+        $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'tapetes'";
@@ -778,6 +742,10 @@ session_start();
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
         if ($numero_resultado != 0) {
+            echo '
+        <hr>
+        <h2 class="text-center">Tapetes</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -829,14 +797,8 @@ session_start();
                 }
             }
         }
-        ?>
-        <hr>
-        <h2 class="text-center">Panos</h2>
-    <?php
-        $col = 0;
 
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
+        $col = 0;
 
         //Gerando a SQL de PESQUISA das categorias existentes no BD
         $pesquisar_prod = "SELECT * FROM `produto` WHERE `categoria` = 'panos'";
@@ -848,6 +810,10 @@ session_start();
         $numero_resultado = mysqli_num_rows($resultado_prod);
 
         if ($numero_resultado != 0) {
+            echo '
+        <hr>
+        <h2 class="text-center">Panos</h2>';
+
             //Existe categorias cadastradas!
             for ($i = 1; $i <= $numero_resultado; $i++) {
                 $vetor_prod = mysqli_fetch_array($resultado_prod);
@@ -901,9 +867,6 @@ session_start();
         }
     }else{
         $col = 0;
-
-        //Conexão com o banco
-        require("../assets/bd/connect.php");
 
         $categoria = $_GET['categ'];
 

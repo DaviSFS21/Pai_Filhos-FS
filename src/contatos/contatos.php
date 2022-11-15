@@ -92,28 +92,12 @@ session_start();
           <a href="../carrinho/carrinho.php" style="height: 84px; width: 90px;"><img src="../assets/images/icon-buy.png" alt="" style="height: 50px; width: 50px; margin-top: -10px; margin-left: -10px;"></a>
         </li>
         <!-- form do search para conseguir pesquisar os produtos de forma automática -->
-        <form class="d-flex" role="search" style="padding-top: 27px; padding-left: 45px;">
-        <!-- Input para fazer a pesquisa -->
-          <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" list="datalistOptions" style="margin-right: 4px; margin-left: -10px; width: 10pc;">
-          <!-- Datalist com os produtos disponiveis na loja -->
-          <datalist id="datalistOptions">
-            <option value="Travesseiro"></option>
-            <option value="Colchão"></option>
-            <option value="Edredom"></option>
-            <option value="Lençol"></option>
-            <option value="Cadeiras"></option>
-            <option value="Plásticos"></option>
-            <option value="Alumínio"></option>
-            <option value="Vidros"></option>
-            <option value="Eletrodomésticos"></option>
-            <option value="Escada"></option>
-            <option value="Tapete"></option>
-            <option value="Panos"></option>
-            <!-- Fim - Datalist -->
-          </datalist>
-          <!-- Botão para fazer a pesquisa do produto -->
-          <button class="btn btn-outline-success" type="submit" style="margin-right: -48px;"><i class="fa fa-search"></i></button>
-           <!-- Fim - form -->
+        <form action="../prod/search.php" method="GET" class="d-flex" role="search" style="padding-top: 27px; padding-left: 45px;">
+            <!-- Input para fazer a pesquisa -->
+            <input class="form-control" type="search" placeholder="Pesquisar" name="search" aria-label="Pesquisar" list="datalistOptions" style="margin-right: 4px; margin-left: -10px; width: 10pc;">
+            <!-- Botão para fazer a pesquisa do produto -->
+            <button class="btn btn-outline-success" type="submit" style="margin-right: -48px;"><i class="fa fa-search"></i></button>
+            <!-- Fim - form -->
         </form>
            <!-- Fim - ul -->
       </ul>
