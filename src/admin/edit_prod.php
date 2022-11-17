@@ -88,7 +88,9 @@ if(isset($_GET['id_prod'])){
                     <option value="panos">Panos</option>
                 </select><br>
                 <!-- Preço do produto -->
-                Preço: <input name="a_preco" type=number size=20 maxlength=11 value="<?php echo $vetor_prod[6]; ?>" required>
+                Preço: <input name="a_preco" type=text 
+                onkeypress="return event.charCode >= 46 && event.charCode <= 57" 
+                size=20 maxlength=11 value="<?php echo $vetor_prod[6]; ?>" required>
                 <!--Imagem do produto -->
                 Imagem: <input type="file" name="a_img">
                 <input type=submit value=Enviar>

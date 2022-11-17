@@ -63,7 +63,8 @@ if (isset($_SESSION['nome'])) {
           <option value="panos">Panos</option>
         </select><br>
         <!--Preço do produto-->
-        Preço: <input name="c_preco" type=number size=20 maxlength=11>
+        Preço: <input name="c_preco" type=text 
+        onkeypress="return event.charCode >= 46 && event.charCode <= 57" size=20 maxlength=11>
         <!--Imagem do produto-->
         Imagem: <input type="file" name="c_img">
         <input type=submit value=Enviar>

@@ -1,5 +1,8 @@
 <?php
-session_start();
+session_start(); 
+
+/* Irá verificar se há uma sessão em funcionamento e irá decidir se é um admin ou não, redirecionando
+ para a página de admin ou para o carrinho. */
 if (isset($_SESSION['nome'])) {
   if ($_SESSION['verif_admin'] == 1) {
 ?>
@@ -15,5 +18,11 @@ if (isset($_SESSION['nome'])) {
     </script>
 <?php
   }
+} else {
+  ?>
+  <script>
+    window.location.replace("../index/index.php");
+  </script> 
+  <?php 
 }
 ?>
