@@ -12,6 +12,7 @@ if(isset($_SESSION['nome'])){
       window.location.replace("../index/index.php");
     </script>
   <?php
+  die();
   }
 }else{
   ?>
@@ -19,6 +20,16 @@ if(isset($_SESSION['nome'])){
     window.location.replace("../login/index.php");
   </script>
 <?php
+}
+
+if($_POST['a_categoria'] == "Selecione..."){
+  ?>
+  <script>
+      alert("Selecione uma categoria...");
+      javascript:history.back();  
+  </script>
+  <?php
+  die();
 }
 
 require("../assets/bd/connect.php");

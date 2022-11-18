@@ -5,21 +5,33 @@ session_start();
 
 /* A sequência irá verificar se há uma sessão ativa no dispositivo, 
 logo após irá verificar se a conta da sessão possui privilégios de administrador. */
-if(isset($_SESSION['nome'])){
-  if($_SESSION['verif_admin'] == 0){
-  ?>
+    if(isset($_SESSION['nome'])){
+    if($_SESSION['verif_admin'] == 0){
+    ?>
     <script>
-      alert("Você não deveria estar aqui...");
-      window.location.replace("../index/index.php");
+    alert("Você não deveria estar aqui...");
+    window.location.replace("../index/index.php");
     </script>
-  <?php
-  }
+    <?php
+    die();
+    }
 }else{
-  ?>
-  <script>
-    window.location.replace("../login/index.php");
-  </script>
-<?php
+    ?>
+    <script>
+        window.location.replace("../login/index.php");
+    </script>
+    <?php
+    die();
+}
+
+if($_POST['c_categoria'] == "Selecione..."){
+    ?>
+    <script>
+        alert("Selecione uma categoria...");
+        javascript:history.back();
+    </script>
+    <?php
+    die();
 }
 
 require("../assets/bd/connect.php");

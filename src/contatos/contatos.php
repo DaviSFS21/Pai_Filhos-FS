@@ -31,7 +31,7 @@ session_start();
       <!-- Fim - Div -->
     </div>
     <!-- NAV -->
-    <nav style="width: 891px; padding-top: 5px; margin-right: 113px;">
+    <nav style="width: 820px; padding-top: 5px; margin-right: 113px;">
     <!-- ul engloba e ordena todos os 'li' -->
       <ul style="padding-left: 0px;">
       <!-- li para acesso do index -->

@@ -130,7 +130,7 @@ if(isset($_SESSION['nome'])){
                             <p class="card-text">'.$vetor_prod[3].'</p>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">'.$vetor_prod[6].'</p>
+                            <p class="card-text">R$'.$vetor_prod[6].'</p>
                         </div>
                         <button type="button" class="btn btn-success">
                             <a href="edit_prod.php?id_prod='.$vetor_prod[0].'" class="color-hover">Editar produto</a>

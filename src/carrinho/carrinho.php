@@ -130,7 +130,7 @@ if (isset($_GET['id_prod'])) {
       <ul style="list-style-type: none;">
         <li class="totalRow final" style="margin-right: 32%"><span class="label">Total</span><span class="value">R$<?php echo $total; ?></span></li>
         <li class="totalRow"><a href="?action=limp" class="btn continue" style="background-color: red; margin-bottom: 30px">Limpar carrinho</a></li>
-        <li class="totalRow"><a href="#" class="btn continue">Ir ao Pagamento</a></li>
+        <li class="totalRow"><a href="../index/index.php" class="btn continue" onclick="alert('Pedido finalizado!');">Finalizar pedido</a></li>
       </ul>
     </div>
   </div>
