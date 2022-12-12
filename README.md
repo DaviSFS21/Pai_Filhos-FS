@@ -11,7 +11,7 @@
 
 ## 💼 Tecnologias utilizadas
 
-Para o desenvolvimento deste site utilizei as seguintes tecnologias:
+Para o desenvolvimento deste site utilizamos as seguintes tecnologias:
 
 - HTML;
 - CSS;
@@ -21,7 +21,7 @@ Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 
 ## 💼 Frameworks e libs utilizdas
 
-Para o desenvolvimento deste site utilizei os(as) seguintes frameworks/libs :
+Para o desenvolvimento deste site utilizamos os(as) seguintes frameworks/libs :
 
 - Bootstrap;
 - W3.CSS;
@@ -52,8 +52,7 @@ git clone https://github.com/DaviSFS21/Pai_Filhos-FS.git
 
 ## 🤝 Colaboradores
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
+Agradecemos às seguintes pessoas que contribuíram para este projeto: 
 <table>
   <tr>
     <td align="center">
