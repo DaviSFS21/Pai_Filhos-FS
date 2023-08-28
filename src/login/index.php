@@ -59,10 +59,10 @@ if (isset($_POST['n_email'])) {
     if ($verif_cpf == 1) $valor_rep = "CPF; ";
     if ($verif_email == 1) $valor_rep = $valor_rep . "Email; ";
     if ($verif_tel == 1) $valor_rep = $valor_rep . "Telefone; ";
-  ?>
-    <script>
-      alert("Já cadastrados: <?php echo trim($valor_rep, "; "); ?>");
-    </script>
+    ?>
+      <script>
+        alert("Já cadastrados: <?php echo trim($valor_rep, "; "); ?>");
+      </script>
     <?php
   }
   mysqli_close($conexao);

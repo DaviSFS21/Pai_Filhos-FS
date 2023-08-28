@@ -74,7 +74,7 @@ session_start();
         <li class="drop_2">
           <?php
           /* O usuário irá ver seu nome no header caso esteja logado. Senão verá uma mensagem de login. */
-          if(isset($_SESSION['nome'])){
+          if (isset($_SESSION['nome'])) {
             echo '<a href="../user/index.php">Olá, ' . $_SESSION['nome'] . '</a>
                 <ul class="drop" style="width: 20%; margin-left: 457px;">
                   <li class="scroll">
@@ -83,7 +83,7 @@ session_start();
                     </ul>
                   </li>
                 </ul>';
-          }else{
+          } else {
             echo "<a href='../login/index.php'>Faça o login</a>";
           }
           ?>
@@ -94,11 +94,11 @@ session_start();
         </li>
         <!-- form do search para conseguir pesquisar os produtos de forma automática -->
         <form action="../prod/search.php" method="GET" class="d-flex" role="search" style="padding-top: 27px; padding-left: 45px;">
-            <!-- Input para fazer a pesquisa -->
-            <input class="form-control" type="search" placeholder="Pesquisar" name="search" aria-label="Pesquisar" list="datalistOptions" style="margin-right: 4px; margin-left: -10px; width: 10pc;">
-            <!-- Botão para fazer a pesquisa do produto -->
-            <button class="btn btn-outline-success" type="submit" style="margin-right: -48px;"><i class="fa fa-search"></i></button>
-            <!-- Fim - form -->
+          <!-- Input para fazer a pesquisa -->
+          <input class="form-control" type="search" placeholder="Pesquisar" name="search" aria-label="Pesquisar" list="datalistOptions" style="margin-right: 4px; margin-left: -10px; width: 10pc;">
+          <!-- Botão para fazer a pesquisa do produto -->
+          <button class="btn btn-outline-success" type="submit" style="margin-right: -48px;"><i class="fa fa-search"></i></button>
+          <!-- Fim - form -->
         </form>
         <!-- Fim - ul -->
       </ul>
