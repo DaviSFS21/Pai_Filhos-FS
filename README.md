@@ -6,12 +6,12 @@
       <h2>   
       Logo da empresa
       </h2>
-     <img src="https://raw.githubusercontent.com/MatheusSchiavao/Pai_Filhos-FS/master/src/assets/images/Logo_P%26F.png" width="260px;" height="200px;" alt="Logo da empresa">
+     <img src="https://raw.githubusercontent.com/DaviSFS21/Pai_Filhos-FS/master/src/assets/images/Logo_P%26F.png" width="260px;" height="200px;" alt="Logo da empresa">
    </div>
 
 ## 💼 Tecnologias utilizadas
 
-Para o desenvolvimento deste site utilizei as seguintes tecnologias:
+Para o desenvolvimento deste site utilizamos as seguintes tecnologias:
 
 - HTML;
 - CSS;
@@ -21,7 +21,7 @@ Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 
 ## 💼 Frameworks e libs utilizdas
 
-Para o desenvolvimento deste site utilizei os(as) seguintes frameworks/libs :
+Para o desenvolvimento deste site utilizamos os(as) seguintes frameworks/libs :
 
 - Bootstrap;
 - W3.CSS;
@@ -42,18 +42,17 @@ Para instalar o <Pai_Filhos-FS>, siga estas etapas:
 
 Linux e macOS:
 ```
-git clone https://github.com/MatheusSchiavao/Pai_Filhos-FS.git
+git clone https://github.com/DaviSFS21/Pai_Filhos-FS.git
 ```
 
 Windows:
 ```
-git clone https://github.com/MatheusSchiavao/Pai_Filhos-FS.git
+git clone https://github.com/DaviSFS21/Pai_Filhos-FS.git
 ```
 
 ## 🤝 Colaboradores
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
+Agradecemos às seguintes pessoas que contribuíram para este projeto: 
 <table>
   <tr>
     <td align="center">
